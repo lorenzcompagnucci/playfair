@@ -9,8 +9,8 @@ typedef struct Key {
 } Key;
 
 void setKey(Key* chiave, char* keyPath);
-void setMatrix(Key* chiave, char* buffer);
+void setMatrix(Key* chiave, char* alfabeto, char* parolachiave);
 void loopOnMatrix(Key* chiave, char c);
-void setChars(Key* chiave, char* buffer);
+void setChars(Key* chiave, char sostituto, char speciale);
 
 #endif //PLAYFAIR_KEY_H
