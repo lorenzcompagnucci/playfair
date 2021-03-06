@@ -21,18 +21,19 @@ int main(int argc, char *argv[]) {
         createKey(argv[2], argv[3], argv[4], argv[5], argv[6]);
         return 1;
     }
-    static Key chiave;
     if (strcmp(argv[1], "encode") == 0) {
-        setKey(&chiave, argv[2]);
+        key* key = getKey(argv[2]);
         for (int i = 4; i < argc; ++i) {
-            encodeFile(chiave, argv[3], argv[i]);
+            encodeFile(key, argv[3], argv[i]);
         }
+        freeKey(key);
         return 1;
     } else if (strcmp(argv[1], "decode") == 0) {
-        setKey(&chiave, argv[2]);
+        key* key = getKey(argv[2]);
         for (int i = 4; i < argc; ++i) {
-            decodeFile(chiave, argv[3], argv[i]);
+            decodeFile(key, argv[3], argv[i]);
         }
+        freeKey(key);
         return 1;
     }
     printf("Unknown command '%s'\n", argv[1]);

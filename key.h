@@ -1,16 +1,27 @@
 #ifndef PLAYFAIR_KEY_H
 #define PLAYFAIR_KEY_H
 
-typedef struct Key {
+typedef struct key_data {
+    char* alfabeto;
+    char* sostituto;
+    char* speciale;
+    char* chiave;
+} key_data;
+
+typedef struct key {
+    key_data* kd;
     char mancante;
     char sostituto;
     char speciale;
-    char matrice[5][5];
-} Key;
+    char** matrice;
+} key;
 
-void setKey(Key* chiave, char* keyPath);
-void setMatrix(Key* chiave, char* alfabeto, char* parolachiave);
-void loopOnMatrix(Key* chiave, char c);
-void setChars(Key* chiave, char sostituto, char speciale);
+key* getKey(char* keyPath);
+key_data* setKeyData(char* buffer);
+void setMatrix(key* chiavee);
+void loopOnMatrix(key* chiave, char c);
+void setChars(key* chiave);
+void freeKey(key* key);
+void freeKeyData(key_data* kd);
 
 #endif //PLAYFAIR_KEY_H

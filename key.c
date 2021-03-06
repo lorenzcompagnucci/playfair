@@ -4,32 +4,48 @@
 #include "key.h"
 #include "file.h"
 
-void setKey(Key* chiave, char* keyPath) {
+key* getKey(char* keyPath) {
+    key* key = malloc(sizeof(key));
+    key->matrice = (char**) malloc(sizeof(char*) * 5);
+    for (int i = 0; i < 5; ++i) {
+        key->matrice[i] = (char*) calloc(5, sizeof(char));
+    }
     char* buffer = readFile(keyPath);
-    char* token = strtok(buffer, "\r\n");
-    char* alfabeto = token;
-    token = strtok(NULL, "\r\n");
-    char* sostituto = token;
-    token = strtok(NULL, "\r\n");
-    char* speciale = token;
-    token = strtok(NULL, "\r\n");
-    char* parolachiave = token;
-    setMatrix(chiave, alfabeto, parolachiave);
-    setChars(chiave, sostituto[0], speciale[0]);
+    key->kd = setKeyData(buffer);
     free(buffer);
     buffer = NULL;
+    setMatrix(key);
+    setChars(key);
+    return key;
 }
 
-void setMatrix(Key* chiave, char* alfabeto, char* parolachiave) {
-    for (int i = 0; i < strlen(parolachiave); i++) {
-        loopOnMatrix(chiave, parolachiave[i]);
+key_data *setKeyData(char* buffer) {
+    key_data* kd = (key_data*) malloc(sizeof(kd));
+    char* token = strtok(buffer, "\r\n");
+    kd->alfabeto = (char*) malloc(sizeof(char) * (strlen(token)+1));
+    strcpy(kd->alfabeto, token);
+    token = strtok(NULL, "\r\n");
+    kd->sostituto = (char*) malloc(sizeof(char) * (strlen(token)+1));
+    strcpy(kd->sostituto, token);
+    token = strtok(NULL, "\r\n");
+    kd->speciale = (char*) malloc(sizeof(char) * (strlen(token)+1));
+    strcpy(kd->speciale, token);
+    token = strtok(NULL, "\r\n");
+    kd->chiave = (char*) malloc(sizeof(char) * (strlen(token)+1));
+    strcpy(kd->chiave, token);
+    return kd;
+}
+
+void setMatrix(key* key) {
+    for (int i = 0; i < strlen(key->kd->chiave); i++) {
+        loopOnMatrix(key, key->kd->chiave[i]);
     }
-    for (int i = 0; i < strlen(alfabeto); i++) {
-        loopOnMatrix(chiave, alfabeto[i]);
+    for (int i = 0; i < strlen(key->kd->alfabeto); i++) {
+        loopOnMatrix(key, key->kd->alfabeto[i]);
     }
 }
 
-void loopOnMatrix(Key* chiave, char c) {
+void loopOnMatrix(key* chiave, char c) {
     int counter = 0;
     for (int m = 0; m < 5 && counter == 0; m++) {
         for (int n = 0; n < 5 && counter == 0; n++) {
@@ -43,9 +59,9 @@ void loopOnMatrix(Key* chiave, char c) {
     }
 }
 
-void setChars(Key* chiave, char sostituto, char speciale) {
-    chiave->sostituto = sostituto;
-    chiave->speciale = speciale;
+void setChars(key* chiave) {
+    chiave->sostituto = chiave->kd->sostituto[0];
+    chiave->speciale = chiave->kd->speciale[0];
     for (char x = 'A'; x <= 'Z'; x++) {
         chiave->mancante = x;
         int counter = 0;
@@ -60,4 +76,29 @@ void setChars(Key* chiave, char sostituto, char speciale) {
             break;
         }
     }
+}
+
+void freeKey(key* key) {
+    freeKeyData(key->kd);
+    for (int i = 0; i < 5; ++i) {
+        for (int j = 0; j < 5; ++j) {
+            free(key->matrice[i][j]);
+        }
+    }
+    free(key->matrice);
+    free(key);
+    key = NULL;
+}
+
+void freeKeyData(key_data* kd) {
+    free(kd->alfabeto);
+    kd->alfabeto = NULL;
+    free(kd->sostituto);
+    kd->sostituto = NULL;
+    free(kd->speciale);
+    kd->speciale = NULL;
+    free(kd->chiave);
+    kd->chiave = NULL;
+    free(kd);
+    kd = NULL;
 }
