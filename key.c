@@ -7,11 +7,11 @@
 key* getKey(char* keyPath) {
     key* key = malloc(sizeof(key));
     key->matrice = (char**) malloc(sizeof(char*) * 5);
-    for (int i = 0; i < 5; ++i) {
+    for (int i = 0; i < 5; i++) {
         key->matrice[i] = (char*) calloc(5, sizeof(char));
     }
     char* buffer = readFile(keyPath);
-    key->kd = setKeyData(buffer);
+    key->kd = getKeyData(buffer);
     free(buffer);
     buffer = NULL;
     setMatrix(key);
@@ -19,7 +19,7 @@ key* getKey(char* keyPath) {
     return key;
 }
 
-key_data *setKeyData(char* buffer) {
+key_data *getKeyData(char* buffer) {
     key_data* kd = (key_data*) malloc(sizeof(kd));
     char* token = strtok(buffer, "\r\n");
     kd->alfabeto = (char*) malloc(sizeof(char) * (strlen(token)+1));
@@ -80,10 +80,8 @@ void setChars(key* chiave) {
 
 void freeKey(key* key) {
     freeKeyData(key->kd);
-    for (int i = 0; i < 5; ++i) {
-        for (int j = 0; j < 5; ++j) {
-            free(key->matrice[i][j]);
-        }
+    for (int i = 0; i < 5; i++) {
+        free(key->matrice[i]);
     }
     free(key->matrice);
     free(key);

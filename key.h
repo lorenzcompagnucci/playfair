@@ -17,7 +17,7 @@ typedef struct key {
 } key;
 
 key* getKey(char* keyPath);
-key_data* setKeyData(char* buffer);
+key_data* getKeyData(char* buffer);
 void setMatrix(key* chiavee);
 void loopOnMatrix(key* chiave, char c);
 void setChars(key* chiave);
