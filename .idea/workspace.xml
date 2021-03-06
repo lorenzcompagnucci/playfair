@@ -11,17 +11,10 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5bcaa253-dc8c-486d-9b11-6666cdece04a" name="Default Changelist" comment="1.0">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/CMakeFiles/playfair.dir/decoding.c.o" beforeDir="false" afterPath="$PROJECT_DIR$/build/CMakeFiles/playfair.dir/decoding.c.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/CMakeFiles/playfair.dir/elabutils.c.o" beforeDir="false" afterPath="$PROJECT_DIR$/build/CMakeFiles/playfair.dir/elabutils.c.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/CMakeFiles/playfair.dir/encoding.c.o" beforeDir="false" afterPath="$PROJECT_DIR$/build/CMakeFiles/playfair.dir/encoding.c.o" afterDir="false" />
+    <list default="true" id="5bcaa253-dc8c-486d-9b11-6666cdece04a" name="Default Changelist" comment="FINALE">
       <change beforePath="$PROJECT_DIR$/build/CMakeFiles/playfair.dir/key.c.o" beforeDir="false" afterPath="$PROJECT_DIR$/build/CMakeFiles/playfair.dir/key.c.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/CMakeFiles/playfair.dir/main.c.o" beforeDir="false" afterPath="$PROJECT_DIR$/build/CMakeFiles/playfair.dir/main.c.o" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/playfair" beforeDir="false" afterPath="$PROJECT_DIR$/build/playfair" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/Testing/Temporary/LastTest.log" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Testing/Temporary/LastTest.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/key.c" beforeDir="false" afterPath="$PROJECT_DIR$/key.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/key.h" beforeDir="false" afterPath="$PROJECT_DIR$/key.h" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -83,7 +76,14 @@
       <option name="project" value="LOCAL" />
       <updated>1614941484830</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="FINALE">
+      <created>1615068448498</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1615068448498</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -103,6 +103,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="1.0" />
-    <option name="LAST_COMMIT_MESSAGE" value="1.0" />
+    <MESSAGE value="FINALE" />
+    <option name="LAST_COMMIT_MESSAGE" value="FINALE" />
   </component>
 </project>

@@ -82,8 +82,10 @@ void freeKey(key* key) {
     freeKeyData(key->kd);
     for (int i = 0; i < 5; i++) {
         free(key->matrice[i]);
+        key->matrice[i] = NULL;
     }
     free(key->matrice);
+    key->matrice = NULL;
     free(key);
     key = NULL;
 }
