@@ -7,24 +7,21 @@
 #include "file.h"
 #include "directory.h"
 
-void encodeFile(key* chiave, char* outputDir, char* inputFile) {
-    char* message = readFile(inputFile);
-    char* outputPath = getDirectory(outputDir, inputFile, ".pf");
+void encode_file(key* chiave, char* outputDir, char* inputFile) {
+    char* message = read_file(inputFile);
+    char* outputPath = get_directory(outputDir, inputFile, ".pf");
     FILE* fout = fopen(outputPath, "w");
-    if (fout == NULL) {
-        perror("ERROR WHILE OPENING THE OUTPUT FILE");
-        exit(0);
-    }
+    check_file(fout, OUT_FILE);
     free(outputPath);
     outputPath = NULL;
-    fixMissingChars(chiave, message);
-    encodeMessagge(chiave, message, fout);
+    fix_missing_chars(chiave, message);
+    encode_messagge(chiave, message, fout);
     fclose(fout);
     free(message);
     message = NULL;
 }
 
-void encodeMessagge(key* chiave, char* message, FILE* fout) {
+void encode_messagge(key* chiave, char* message, FILE* fout) {
     for (int i = 0; i < strlen(message); i++) {
         char l1 = message[i];
         char l2 = message[i+1];
@@ -33,16 +30,16 @@ void encodeMessagge(key* chiave, char* message, FILE* fout) {
         } else {
             l2 = chiave->speciale;
         }
-        encodeCouple(chiave, &l1, &l2);
+        encode_couple(chiave, &l1, &l2);
         fprintf(fout, "%c%c ", l1, l2);
         fflush(fout);
     }
 }
 
-void encodeCouple(key* chiave, char *l1, char *l2) {
+void encode_couple(key* chiave, char *l1, char *l2) {
     int r1 = -1, c1, r2 = -1, c2;
-    findPositions(chiave, l1, &r1, &c1);
-    findPositions(chiave, l2, &r2, &c2);
+    find_positions(chiave, l1, &r1, &c1);
+    find_positions(chiave, l2, &r2, &c2);
     if (r1 == r2) { // stessa riga
         if (c1 == 4) {
             *l1 = chiave->matrice[r1][0];

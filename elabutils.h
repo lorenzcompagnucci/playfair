@@ -3,7 +3,9 @@
 
 #include "key.h"
 
-void fixMissingChars(key* chiave, char* buffer);
-void findPositions(key* chiave, char *l, int* riga, int* colonna);
+#define OUT_FILE "ERROR WHILE OPENING THE OUTPUT FILE"
+
+void fix_missing_chars(key* chiave, char* buffer);
+void find_positions(key* chiave, char *l, int* riga, int* colonna);
 
 #endif //PLAYFAIR_ELABUTILS_H

@@ -1,5 +1,4 @@
 #include <stdlib.h>
-#include <stdio.h>
 #include <string.h>
 #include <libgen.h>
 #include <ftw.h>
@@ -7,28 +6,23 @@
 #include <errno.h>
 
 #include "directory.h"
+#include "file.h"
 
-char* getDirectory(char* outputDir, char* inputFile, char* format) {
+char* get_directory(char* outputDir, char* inputFile, char* format) {
     char *outputFile = (char*) malloc((strlen(basename(inputFile))+5) * sizeof(char));
-    if (outputFile == NULL) {
-        perror("ERROR WHILE CREATING THE OUTPUT FILE");
-        exit(0);
-    }
+    check_malloc(outputFile, FILE_O);
     strcpy(outputFile, basename(inputFile));
-    modifyExtension(outputFile, format);
-    checkDirectory(outputDir);
+    modify_extension(outputFile, format);
+    check_directory(outputDir);
     char* outputPath = (char*) malloc((strlen(outputDir)+1)*sizeof(char) + sizeof(outputFile));
-    if (outputPath == NULL) {
-        perror("ERROR WHILE CREATING THE OUTPUT DIRECTORY");
-        exit(0);
-    }
+    check_malloc(outputPath, DIR_O);
     strcat(strcat(strcpy(outputPath, outputDir), "/"), outputFile);
     free(outputFile);
     outputFile = NULL;
     return outputPath;
 }
 
-void modifyExtension(char* file, char* extension) {
+void modify_extension(char* file, char* extension) {
     int length = strlen(file), lastdot = 0;
     for (int i = 0; i < length; i++) {
         if (file[i] == '.') {
@@ -44,7 +38,7 @@ void modifyExtension(char* file, char* extension) {
     strcat(file, "\0");
 }
 
-void checkDirectory(char* directory) {
+void check_directory(char* directory) {
     DIR* d = opendir(directory);
     if (ENOENT == errno) {
         mkdir(directory, 0777);

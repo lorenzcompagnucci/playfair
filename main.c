@@ -6,7 +6,7 @@
 #include "encoding.h"
 #include "decoding.h"
 
-void printCommands() {
+void print_commands() {
     printf("playfair (encode/decode) chiave outputDir file1 file2..\n");
     printf("playfair createkey path alfabeto sostituto speciale parolachiave.\n");
 }
@@ -14,29 +14,29 @@ void printCommands() {
 int main(int argc, char *argv[]) {
     if (argc < 5) {
         printf("There must be at least 5 args, but only %d were given.\n", argc);
-        printCommands();
+        print_commands();
         return 0;
     }
     if (strcmp(argv[1], "createkey") == 0) {
-        createKey(argv[2], argv[3], argv[4], argv[5], argv[6]);
+        create_key(argv[2], argv[3], argv[4], argv[5], argv[6]);
         return 1;
     }
     if (strcmp(argv[1], "encode") == 0) {
-        key* key = getKey(argv[2]);
+        key* key = get_key(argv[2]);
         for (int i = 4; i < argc; ++i) {
-            encodeFile(key, argv[3], argv[i]);
+            encode_file(key, argv[3], argv[i]);
         }
-        freeKey(key);
+        free_key(key);
         return 1;
     } else if (strcmp(argv[1], "decode") == 0) {
-        key* key = getKey(argv[2]);
+        key* key = get_key(argv[2]);
         for (int i = 4; i < argc; ++i) {
-            decodeFile(key, argv[3], argv[i]);
+            decode_file(key, argv[3], argv[i]);
         }
-        freeKey(key);
+        free_key(key);
         return 1;
     }
     printf("Unknown command '%s'\n", argv[1]);
-    printCommands();
+    print_commands();
     return 0;
 }

@@ -2,7 +2,7 @@
 
 #include "elabutils.h"
 
-void fixMissingChars(key* chiave, char* buffer) {
+void fix_missing_chars(key* chiave, char* buffer) {
     for (int i = 0; i < strlen(buffer); ++i) {
         if (buffer[i] == chiave->mancante) {
             buffer[i] = chiave->sostituto;
@@ -10,7 +10,7 @@ void fixMissingChars(key* chiave, char* buffer) {
     }
 }
 
-void findPositions(key* chiave, char *l, int* riga, int* colonna) {
+void find_positions(key* chiave, char *l, int* riga, int* colonna) {
     for (int i = 0; i < 5 && *riga == -1; ++i) {
         for (int j = 0; j < 5 && *riga == -1; ++j) {
             if (chiave->matrice[i][j] == *l) {

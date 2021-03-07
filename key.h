@@ -16,12 +16,12 @@ typedef struct key {
     char** matrice;
 } key;
 
-key* getKey(char* keyPath);
-key_data* getKeyData(char* buffer);
-void setMatrix(key* chiavee);
-void loopOnMatrix(key* chiave, char c);
-void setChars(key* chiave);
-void freeKey(key* key);
-void freeKeyData(key_data* kd);
+key* get_key(char* keyPath);
+key_data* get_key_data(char* buffer);
+void set_matrix(key* chiavee);
+void loop_on_matrix(key* chiave, char c);
+void set_chars(key* chiave);
+void free_key(key* key);
+void free_key_data(key_data* kd);
 
 #endif //PLAYFAIR_KEY_H

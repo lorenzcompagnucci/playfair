@@ -10,6 +10,7 @@ CMakeFiles/playfair.dir/decoding.c.o: ../key.h
 
 CMakeFiles/playfair.dir/directory.c.o: ../directory.c
 CMakeFiles/playfair.dir/directory.c.o: ../directory.h
+CMakeFiles/playfair.dir/directory.c.o: ../file.h
 
 CMakeFiles/playfair.dir/elabutils.c.o: ../elabutils.c
 CMakeFiles/playfair.dir/elabutils.c.o: ../elabutils.h
@@ -29,6 +30,7 @@ CMakeFiles/playfair.dir/key.c.o: ../file.h
 CMakeFiles/playfair.dir/key.c.o: ../key.c
 CMakeFiles/playfair.dir/key.c.o: ../key.h
 
+CMakeFiles/playfair.dir/keygen.c.o: ../file.h
 CMakeFiles/playfair.dir/keygen.c.o: ../keygen.c
 CMakeFiles/playfair.dir/keygen.c.o: ../keygen.h
 

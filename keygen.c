@@ -1,23 +1,20 @@
 #include <stdio.h>
 #include <string.h>
-#include <stdlib.h>
 #include <assert.h>
 
 #include "keygen.h"
+#include "file.h"
 
-void createKey(char* path, char* alfabeto, char* sostituto, char* speciale, char* chiave) {
-    assert(checkAlphabet(alfabeto) == 1);
+void create_key(char* path, char* alfabeto, char* sostituto, char* speciale, char* chiave) {
+    assert(check_alphabet(alfabeto) == 1);
     FILE* fp = fopen(path, "w");
-    if (fp == NULL) {
-        perror("ERROR WHILE CREATING THE NEW KEYFILE");
-        exit(0);
-    }
+    check_file(fp, OUT_KEY);
     fprintf(fp, "%s\r\n%c\r\n%c\r\n%s\r\n", alfabeto, sostituto[0], speciale[0], chiave);
     fflush(fp);
     fclose(fp);
 }
 
-int checkAlphabet(char* alfabeto) {
+int check_alphabet(char* alfabeto) {
     if (strlen(alfabeto) != 25) {
         printf("THE ALPHABET MUST BE MADE OF 25 CHARS.\n");
         return -1;

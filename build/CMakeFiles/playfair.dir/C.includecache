@@ -6,19 +6,19 @@
 
 #IncludeRegexTransform: 
 
-/home/lorenzo/CLionProjects/playfair/file.h
+/home/lorenzo/CLionProjects/playfair/file.c
 stdio.h
 -
-
-/home/lorenzo/CLionProjects/playfair/key.c
 stdlib.h
 -
 string.h
 -
-key.h
-/home/lorenzo/CLionProjects/playfair/key.h
+ctype.h
+-
 file.h
 /home/lorenzo/CLionProjects/playfair/file.h
 
-/home/lorenzo/CLionProjects/playfair/key.h
+/home/lorenzo/CLionProjects/playfair/file.h
+stdio.h
+-
 

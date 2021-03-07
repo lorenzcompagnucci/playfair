@@ -4,22 +4,22 @@
 #include "key.h"
 #include "file.h"
 
-key* getKey(char* keyPath) {
+key* get_key(char* keyPath) {
     key* k = malloc(sizeof(key));
     k->matrice = (char**) malloc(sizeof(char*) * 5);
     for (int i = 0; i < 5; i++) {
         k->matrice[i] = (char*) calloc(5, sizeof(char));
     }
-    char* buffer = readFile(keyPath);
-    k->kd = getKeyData(buffer);
+    char* buffer = read_file(keyPath);
+    k->kd = get_key_data(buffer);
     free(buffer);
     buffer = NULL;
-    setMatrix(k);
-    setChars(k);
+    set_matrix(k);
+    set_chars(k);
     return k;
 }
 
-key_data *getKeyData(char* buffer) {
+key_data *get_key_data(char* buffer) {
     key_data* kd = (key_data*) malloc(sizeof(key_data));
     char* token = strtok(buffer, "\r\n");
     kd->alfabeto = (char*) malloc(sizeof(char) * (strlen(token)+1));
@@ -36,16 +36,16 @@ key_data *getKeyData(char* buffer) {
     return kd;
 }
 
-void setMatrix(key* key) {
+void set_matrix(key* key) {
     for (int i = 0; i < strlen(key->kd->chiave); i++) {
-        loopOnMatrix(key, key->kd->chiave[i]);
+        loop_on_matrix(key, key->kd->chiave[i]);
     }
     for (int i = 0; i < strlen(key->kd->alfabeto); i++) {
-        loopOnMatrix(key, key->kd->alfabeto[i]);
+        loop_on_matrix(key, key->kd->alfabeto[i]);
     }
 }
 
-void loopOnMatrix(key* chiave, char c) {
+void loop_on_matrix(key* chiave, char c) {
     int counter = 0;
     for (int m = 0; m < 5 && counter == 0; m++) {
         for (int n = 0; n < 5 && counter == 0; n++) {
@@ -59,7 +59,7 @@ void loopOnMatrix(key* chiave, char c) {
     }
 }
 
-void setChars(key* chiave) {
+void set_chars(key* chiave) {
     chiave->sostituto = chiave->kd->sostituto[0];
     chiave->speciale = chiave->kd->speciale[0];
     for (char x = 'A'; x <= 'Z'; x++) {
@@ -78,8 +78,8 @@ void setChars(key* chiave) {
     }
 }
 
-void freeKey(key* key) {
-    freeKeyData(key->kd);
+void free_key(key* key) {
+    free_key_data(key->kd);
     for (int i = 0; i < 5; i++) {
         free(key->matrice[i]);
         key->matrice[i] = NULL;
@@ -90,7 +90,7 @@ void freeKey(key* key) {
     key = NULL;
 }
 
-void freeKeyData(key_data* kd) {
+void free_key_data(key_data* kd) {
     free(kd->alfabeto);
     kd->alfabeto = NULL;
     free(kd->sostituto);

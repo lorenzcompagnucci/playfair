@@ -11,6 +11,7 @@ CMakeFiles/playfair.dir/decoding.c.o
 CMakeFiles/playfair.dir/directory.c.o
  /home/lorenzo/CLionProjects/playfair/directory.c
  /home/lorenzo/CLionProjects/playfair/directory.h
+ /home/lorenzo/CLionProjects/playfair/file.h
 CMakeFiles/playfair.dir/elabutils.c.o
  /home/lorenzo/CLionProjects/playfair/elabutils.c
  /home/lorenzo/CLionProjects/playfair/elabutils.h
@@ -30,6 +31,7 @@ CMakeFiles/playfair.dir/key.c.o
  /home/lorenzo/CLionProjects/playfair/key.c
  /home/lorenzo/CLionProjects/playfair/key.h
 CMakeFiles/playfair.dir/keygen.c.o
+ /home/lorenzo/CLionProjects/playfair/file.h
  /home/lorenzo/CLionProjects/playfair/keygen.c
  /home/lorenzo/CLionProjects/playfair/keygen.h
 CMakeFiles/playfair.dir/main.c.o

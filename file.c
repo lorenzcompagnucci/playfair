@@ -5,19 +5,16 @@
 
 #include "file.h"
 
-char* readFile(char* inputFile) {
+char* read_file(char* inputFile) {
     FILE* fin = fopen(inputFile, "r");
-    if (fin == NULL) {
-        perror("INPUT FILE ERROR");
-        exit(0);
-    }
-    char* buffer = (char*) malloc(sizeof(char) * (fileSize(fin)+1));
+    check_file(fin, INP_FILE);
+    char* buffer = (char*) malloc(sizeof(char) * (file_size(fin)+1));
     reader(fin, buffer);
     fclose(fin);
     return buffer;
 }
 
-long int fileSize(FILE* fp) {
+long int file_size(FILE* fp) {
     fseek(fp, 0L, SEEK_END);
     long int size = ftell(fp);
     rewind(fp);
@@ -25,10 +22,7 @@ long int fileSize(FILE* fp) {
 }
 
 void reader(FILE* fin, char* buffer) {
-    if (buffer == NULL) {
-        perror("BUFFER ERROR");
-        exit(0);
-    }
+    check_malloc(buffer, INP_BUFF);
     int i = 0;
     char c;
     while ((c = fgetc(fin)) != EOF) {
@@ -38,4 +32,18 @@ void reader(FILE* fin, char* buffer) {
         }
     }
     buffer[i] = '\0';
+}
+
+void check_file(FILE* fp, char* errmessage) {
+    if (fp == NULL) {
+        printf("%s\n", errmessage);
+        exit(0);
+    }
+}
+
+void check_malloc(char* buffer, char* errmessage) {
+    if (buffer == NULL) {
+        printf("%s\n", errmessage);
+        exit(0);
+    }
 }
