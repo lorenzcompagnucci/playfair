@@ -4,6 +4,7 @@
 #include <ctype.h>
 
 #include "file.h"
+#include "mem_utils.h"
 
 char* read_file(char* inputFile) {
     FILE* fin = fopen(inputFile, "r");
@@ -22,7 +23,7 @@ long int file_size(FILE* fp) {
 }
 
 void reader(FILE* fin, char* buffer) {
-    check_malloc(buffer, INP_BUFF);
+    check_string(buffer, INP_BUFF);
     int i = 0;
     char c;
     while ((c = fgetc(fin)) != EOF) {
@@ -36,13 +37,6 @@ void reader(FILE* fin, char* buffer) {
 
 void check_file(FILE* fp, char* errmessage) {
     if (fp == NULL) {
-        printf("%s\n", errmessage);
-        exit(0);
-    }
-}
-
-void check_malloc(char* buffer, char* errmessage) {
-    if (buffer == NULL) {
         printf("%s\n", errmessage);
         exit(0);
     }

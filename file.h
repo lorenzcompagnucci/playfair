@@ -10,6 +10,5 @@ void reader(FILE* fin, char* buffer);
 long int file_size(FILE* fp);
 char* read_file(char* inputFile);
 void check_file(FILE* fp, char* errmessage);
-void check_malloc(char* buffer, char* errmessage);
 
 #endif //PLAYFAIR_FILE_H

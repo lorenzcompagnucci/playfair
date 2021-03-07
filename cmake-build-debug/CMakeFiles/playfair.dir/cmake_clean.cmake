@@ -1,12 +1,13 @@
 file(REMOVE_RECURSE
   "CMakeFiles/playfair.dir/decoding.c.o"
   "CMakeFiles/playfair.dir/directory.c.o"
-  "CMakeFiles/playfair.dir/elabutils.c.o"
+  "CMakeFiles/playfair.dir/elab_utils.c.o"
   "CMakeFiles/playfair.dir/encoding.c.o"
   "CMakeFiles/playfair.dir/file.c.o"
   "CMakeFiles/playfair.dir/key.c.o"
   "CMakeFiles/playfair.dir/keygen.c.o"
   "CMakeFiles/playfair.dir/main.c.o"
+  "CMakeFiles/playfair.dir/mem_utils.c.o"
   "playfair"
   "playfair.pdb"
 )

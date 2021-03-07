@@ -6,12 +6,13 @@ set(CMAKE_DEPENDS_LANGUAGES
 set(CMAKE_DEPENDS_CHECK_C
   "/home/lorenzo/CLionProjects/playfair/decoding.c" "/home/lorenzo/CLionProjects/playfair/build/CMakeFiles/playfair.dir/decoding.c.o"
   "/home/lorenzo/CLionProjects/playfair/directory.c" "/home/lorenzo/CLionProjects/playfair/build/CMakeFiles/playfair.dir/directory.c.o"
-  "/home/lorenzo/CLionProjects/playfair/elabutils.c" "/home/lorenzo/CLionProjects/playfair/build/CMakeFiles/playfair.dir/elabutils.c.o"
+  "/home/lorenzo/CLionProjects/playfair/elab_utils.c" "/home/lorenzo/CLionProjects/playfair/build/CMakeFiles/playfair.dir/elab_utils.c.o"
   "/home/lorenzo/CLionProjects/playfair/encoding.c" "/home/lorenzo/CLionProjects/playfair/build/CMakeFiles/playfair.dir/encoding.c.o"
   "/home/lorenzo/CLionProjects/playfair/file.c" "/home/lorenzo/CLionProjects/playfair/build/CMakeFiles/playfair.dir/file.c.o"
   "/home/lorenzo/CLionProjects/playfair/key.c" "/home/lorenzo/CLionProjects/playfair/build/CMakeFiles/playfair.dir/key.c.o"
   "/home/lorenzo/CLionProjects/playfair/keygen.c" "/home/lorenzo/CLionProjects/playfair/build/CMakeFiles/playfair.dir/keygen.c.o"
   "/home/lorenzo/CLionProjects/playfair/main.c" "/home/lorenzo/CLionProjects/playfair/build/CMakeFiles/playfair.dir/main.c.o"
+  "/home/lorenzo/CLionProjects/playfair/mem_utils.c" "/home/lorenzo/CLionProjects/playfair/build/CMakeFiles/playfair.dir/mem_utils.c.o"
   )
 set(CMAKE_C_COMPILER_ID "GNU")
 

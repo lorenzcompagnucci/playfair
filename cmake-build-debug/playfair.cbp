@@ -88,10 +88,10 @@
 		<Unit filename="/home/lorenzo/CLionProjects/playfair/directory.h">
 			<Option target="playfair"/>
 		</Unit>
-		<Unit filename="/home/lorenzo/CLionProjects/playfair/elabutils.c">
+		<Unit filename="/home/lorenzo/CLionProjects/playfair/elab_utils.c">
 			<Option target="playfair"/>
 		</Unit>
-		<Unit filename="/home/lorenzo/CLionProjects/playfair/elabutils.h">
+		<Unit filename="/home/lorenzo/CLionProjects/playfair/elab_utils.h">
 			<Option target="playfair"/>
 		</Unit>
 		<Unit filename="/home/lorenzo/CLionProjects/playfair/encoding.c">
@@ -119,6 +119,12 @@
 			<Option target="playfair"/>
 		</Unit>
 		<Unit filename="/home/lorenzo/CLionProjects/playfair/main.c">
+			<Option target="playfair"/>
+		</Unit>
+		<Unit filename="/home/lorenzo/CLionProjects/playfair/mem_utils.c">
+			<Option target="playfair"/>
+		</Unit>
+		<Unit filename="/home/lorenzo/CLionProjects/playfair/mem_utils.h">
 			<Option target="playfair"/>
 		</Unit>
 		<Unit filename="/home/lorenzo/CLionProjects/playfair/CMakeLists.txt">

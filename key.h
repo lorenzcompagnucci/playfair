@@ -1,6 +1,10 @@
 #ifndef PLAYFAIR_KEY_H
 #define PLAYFAIR_KEY_H
 
+#define MATRIX_ERROR "ERROR WHILE ALLOCATING MATRIX"
+#define ROW_ERROR "ERROR WHILE ALLOCAING A MATRIX ROW"
+#define KEY_DATA_ERROR "ERROR WHILE ALLOCATING A COMPONENT OF key_data"
+
 typedef struct key_data {
     char* alfabeto;
     char* sostituto;

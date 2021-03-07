@@ -177,32 +177,32 @@ directory.c.s:
 	$(MAKE) -f CMakeFiles/playfair.dir/build.make CMakeFiles/playfair.dir/directory.c.s
 .PHONY : directory.c.s
 
-elabutils.o: elabutils.c.o
+elab_utils.o: elab_utils.c.o
 
-.PHONY : elabutils.o
+.PHONY : elab_utils.o
 
 # target to build an object file
-elabutils.c.o:
-	$(MAKE) -f CMakeFiles/playfair.dir/build.make CMakeFiles/playfair.dir/elabutils.c.o
-.PHONY : elabutils.c.o
+elab_utils.c.o:
+	$(MAKE) -f CMakeFiles/playfair.dir/build.make CMakeFiles/playfair.dir/elab_utils.c.o
+.PHONY : elab_utils.c.o
 
-elabutils.i: elabutils.c.i
+elab_utils.i: elab_utils.c.i
 
-.PHONY : elabutils.i
+.PHONY : elab_utils.i
 
 # target to preprocess a source file
-elabutils.c.i:
-	$(MAKE) -f CMakeFiles/playfair.dir/build.make CMakeFiles/playfair.dir/elabutils.c.i
-.PHONY : elabutils.c.i
+elab_utils.c.i:
+	$(MAKE) -f CMakeFiles/playfair.dir/build.make CMakeFiles/playfair.dir/elab_utils.c.i
+.PHONY : elab_utils.c.i
 
-elabutils.s: elabutils.c.s
+elab_utils.s: elab_utils.c.s
 
-.PHONY : elabutils.s
+.PHONY : elab_utils.s
 
 # target to generate assembly for a file
-elabutils.c.s:
-	$(MAKE) -f CMakeFiles/playfair.dir/build.make CMakeFiles/playfair.dir/elabutils.c.s
-.PHONY : elabutils.c.s
+elab_utils.c.s:
+	$(MAKE) -f CMakeFiles/playfair.dir/build.make CMakeFiles/playfair.dir/elab_utils.c.s
+.PHONY : elab_utils.c.s
 
 encoding.o: encoding.c.o
 
@@ -339,6 +339,33 @@ main.c.s:
 	$(MAKE) -f CMakeFiles/playfair.dir/build.make CMakeFiles/playfair.dir/main.c.s
 .PHONY : main.c.s
 
+mem_utils.o: mem_utils.c.o
+
+.PHONY : mem_utils.o
+
+# target to build an object file
+mem_utils.c.o:
+	$(MAKE) -f CMakeFiles/playfair.dir/build.make CMakeFiles/playfair.dir/mem_utils.c.o
+.PHONY : mem_utils.c.o
+
+mem_utils.i: mem_utils.c.i
+
+.PHONY : mem_utils.i
+
+# target to preprocess a source file
+mem_utils.c.i:
+	$(MAKE) -f CMakeFiles/playfair.dir/build.make CMakeFiles/playfair.dir/mem_utils.c.i
+.PHONY : mem_utils.c.i
+
+mem_utils.s: mem_utils.c.s
+
+.PHONY : mem_utils.s
+
+# target to generate assembly for a file
+mem_utils.c.s:
+	$(MAKE) -f CMakeFiles/playfair.dir/build.make CMakeFiles/playfair.dir/mem_utils.c.s
+.PHONY : mem_utils.c.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -354,9 +381,9 @@ help:
 	@echo "... directory.o"
 	@echo "... directory.i"
 	@echo "... directory.s"
-	@echo "... elabutils.o"
-	@echo "... elabutils.i"
-	@echo "... elabutils.s"
+	@echo "... elab_utils.o"
+	@echo "... elab_utils.i"
+	@echo "... elab_utils.s"
 	@echo "... encoding.o"
 	@echo "... encoding.i"
 	@echo "... encoding.s"
@@ -372,6 +399,9 @@ help:
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
+	@echo "... mem_utils.o"
+	@echo "... mem_utils.i"
+	@echo "... mem_utils.s"
 .PHONY : help
 
 

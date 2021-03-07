@@ -3,17 +3,17 @@
 #include <string.h>
 
 #include "encoding.h"
-#include "elabutils.h"
 #include "file.h"
 #include "directory.h"
+#include "mem_utils.h"
+#include "elab_utils.h"
 
 void encode_file(key* chiave, char* outputDir, char* inputFile) {
     char* message = read_file(inputFile);
     char* outputPath = get_directory(outputDir, inputFile, ".pf");
     FILE* fout = fopen(outputPath, "w");
     check_file(fout, OUT_FILE);
-    free(outputPath);
-    outputPath = NULL;
+    free_string(outputPath);
     fix_missing_chars(chiave, message);
     char l1, l2;
     for (int i = 0; i < strlen(message); i++) {
@@ -23,8 +23,7 @@ void encode_file(key* chiave, char* outputDir, char* inputFile) {
         fflush(fout);
     }
     fclose(fout);
-    free(message);
-    message = NULL;
+    free_string(message);
 }
 
 void encode_couple(key* chiave, char *l1, char *l2) {

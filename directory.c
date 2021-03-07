@@ -6,19 +6,18 @@
 #include <errno.h>
 
 #include "directory.h"
-#include "file.h"
+#include "mem_utils.h"
 
 char* get_directory(char* outputDir, char* inputFile, char* format) {
     char *outputFile = (char*) malloc((strlen(basename(inputFile))+5) * sizeof(char));
-    check_malloc(outputFile, FILE_O);
+    check_string(outputFile, FILE_O);
     strcpy(outputFile, basename(inputFile));
     modify_extension(outputFile, format);
     check_directory(outputDir);
     char* outputPath = (char*) malloc((strlen(outputDir)+1)*sizeof(char) + sizeof(outputFile));
-    check_malloc(outputPath, DIR_O);
+    check_string(outputPath, DIR_O);
     strcat(strcat(strcpy(outputPath, outputDir), "/"), outputFile);
-    free(outputFile);
-    outputFile = NULL;
+    free_string(outputFile);
     return outputPath;
 }
 
