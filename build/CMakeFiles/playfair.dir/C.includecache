@@ -29,8 +29,6 @@ key.h
 /home/lorenzo/CLionProjects/playfair/directory.h
 
 /home/lorenzo/CLionProjects/playfair/elab_utils.c
-string.h
--
 elab_utils.h
 /home/lorenzo/CLionProjects/playfair/elab_utils.h
 
@@ -58,63 +56,11 @@ elab_utils.h
 key.h
 /home/lorenzo/CLionProjects/playfair/key.h
 
-/home/lorenzo/CLionProjects/playfair/file.c
-stdio.h
--
-stdlib.h
--
-ctype.h
--
-file.h
-/home/lorenzo/CLionProjects/playfair/file.h
-mem_utils.h
-/home/lorenzo/CLionProjects/playfair/mem_utils.h
-
 /home/lorenzo/CLionProjects/playfair/file.h
 stdio.h
 -
-
-/home/lorenzo/CLionProjects/playfair/key.c
-stdlib.h
--
-string.h
--
-key.h
-/home/lorenzo/CLionProjects/playfair/key.h
-mem_utils.h
-/home/lorenzo/CLionProjects/playfair/mem_utils.h
-file.h
-/home/lorenzo/CLionProjects/playfair/file.h
 
 /home/lorenzo/CLionProjects/playfair/key.h
-
-/home/lorenzo/CLionProjects/playfair/keygen.c
-stdio.h
--
-string.h
--
-assert.h
--
-keygen.h
-/home/lorenzo/CLionProjects/playfair/keygen.h
-file.h
-/home/lorenzo/CLionProjects/playfair/file.h
-
-/home/lorenzo/CLionProjects/playfair/keygen.h
-
-/home/lorenzo/CLionProjects/playfair/main.c
-stdio.h
--
-string.h
--
-keygen.h
-/home/lorenzo/CLionProjects/playfair/keygen.h
-key.h
-/home/lorenzo/CLionProjects/playfair/key.h
-encoding.h
-/home/lorenzo/CLionProjects/playfair/encoding.h
-decoding.h
-/home/lorenzo/CLionProjects/playfair/decoding.h
 
 /home/lorenzo/CLionProjects/playfair/mem_utils.h
 

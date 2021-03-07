@@ -13,10 +13,9 @@ void decode_file(key* chiave, char* outputDir, char* inputFile) {
     FILE* fout = fopen(outputPath, "w");
     check_file(fout, OUT_FILE_ERROR);
     free_string(outputPath);
-    fix_missing_chars(chiave, message);
     char l1, l2;
     for (int i = 0; i < strlen(message); i++) {
-        create_couples(message, chiave, &l1, &l2, &i);
+        create_couple(message, chiave, &l1, &l2, &i);
         decode_couple(chiave, &l1, &l2);
         fprintf(fout, "%c%c ", l1, l2);
         fflush(fout);

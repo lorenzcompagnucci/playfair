@@ -1,18 +1,14 @@
-#include <string.h>
-
 #include "elab_utils.h"
 
-void fix_missing_chars(key* chiave, char* buffer) {
-    for (int i = 0; i < strlen(buffer); ++i) {
-        if (buffer[i] == chiave->mancante) {
-            buffer[i] = chiave->sostituto;
-        }
-    }
-}
-
-void create_couples(char* message, key* chiave, char* l1, char* l2, int *i) {
+void create_couple(char* message, key* chiave, char* l1, char* l2, int *i) {
     *l1 = message[*i];
     *l2 = message[*i+1];
+    if (*l1 == chiave->mancante) {
+        *l1 = chiave->speciale;
+    }
+    if (*l2 == chiave->mancante) {
+        *l2 = chiave->speciale;
+    }
     if (*l1 != *l2 && *l2 != '\0') {
         *i += 1;
     } else {
