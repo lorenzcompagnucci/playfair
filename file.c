@@ -1,6 +1,5 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include <string.h>
 #include <ctype.h>
 
 #include "file.h"
@@ -8,7 +7,7 @@
 
 char* read_file(char* inputFile) {
     FILE* fin = fopen(inputFile, "r");
-    check_file(fin, INP_FILE);
+    check_file(fin, INP_FILE_ERROR);
     char* buffer = (char*) malloc(sizeof(char) * (file_size(fin)+1));
     reader(fin, buffer);
     fclose(fin);
@@ -23,7 +22,7 @@ long int file_size(FILE* fp) {
 }
 
 void reader(FILE* fin, char* buffer) {
-    check_string(buffer, INP_BUFF);
+    check_string(buffer, INP_BUFF_ERROR);
     int i = 0;
     char c;
     while ((c = fgetc(fin)) != EOF) {

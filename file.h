@@ -3,8 +3,8 @@
 
 #include <stdio.h>
 
-#define INP_FILE "INPUT FILE ERROR"
-#define INP_BUFF "INPUT FILE BUFFER ERROR"
+#define INP_FILE_ERROR "INPUT FILE ERROR"
+#define INP_BUFF_ERROR "INPUT FILE BUFFER ERROR"
 
 void reader(FILE* fin, char* buffer);
 long int file_size(FILE* fp);

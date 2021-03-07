@@ -3,7 +3,7 @@
 
 #include "key.h"
 
-#define OUT_FILE "ERROR WHILE OPENING THE OUTPUT FILE"
+#define OUT_FILE_ERROR "ERROR WHILE OPENING THE OUTPUT FILE"
 
 void fix_missing_chars(key* chiave, char* buffer);
 void create_couples(char* message, key* chiave, char* l1, char* l2, int *i);

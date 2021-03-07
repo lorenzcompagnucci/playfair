@@ -8,7 +8,7 @@
 void create_key(char* path, char* alfabeto, char* sostituto, char* speciale, char* chiave) {
     assert(check_alphabet(alfabeto) == 1);
     FILE* fp = fopen(path, "w");
-    check_file(fp, OUT_KEY);
+    check_file(fp, OUT_KEY_ERROR);
     fprintf(fp, "%s\r\n%c\r\n%c\r\n%s\r\n", alfabeto, sostituto[0], speciale[0], chiave);
     fflush(fp);
     fclose(fp);

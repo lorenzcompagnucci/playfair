@@ -1,5 +1,4 @@
 #include <stdio.h>
-#include <stdlib.h>
 #include <string.h>
 
 #include "decoding.h"
@@ -12,7 +11,7 @@ void decode_file(key* chiave, char* outputDir, char* inputFile) {
     char* message = read_file(inputFile);
     char* outputPath = get_directory(outputDir, inputFile, ".dec");
     FILE* fout = fopen(outputPath, "w");
-    check_file(fout, OUT_FILE);
+    check_file(fout, OUT_FILE_ERROR);
     free_string(outputPath);
     fix_missing_chars(chiave, message);
     char l1, l2;
