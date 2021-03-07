@@ -5,22 +5,22 @@
 #include "file.h"
 
 key* getKey(char* keyPath) {
-    key* key = malloc(sizeof(key));
-    key->matrice = (char**) malloc(sizeof(char*) * 5);
+    key* k = malloc(sizeof(key));
+    k->matrice = (char**) malloc(sizeof(char*) * 5);
     for (int i = 0; i < 5; i++) {
-        key->matrice[i] = (char*) calloc(5, sizeof(char));
+        k->matrice[i] = (char*) calloc(5, sizeof(char));
     }
     char* buffer = readFile(keyPath);
-    key->kd = getKeyData(buffer);
+    k->kd = getKeyData(buffer);
     free(buffer);
     buffer = NULL;
-    setMatrix(key);
-    setChars(key);
-    return key;
+    setMatrix(k);
+    setChars(k);
+    return k;
 }
 
 key_data *getKeyData(char* buffer) {
-    key_data* kd = (key_data*) malloc(sizeof(kd));
+    key_data* kd = (key_data*) malloc(sizeof(key_data));
     char* token = strtok(buffer, "\r\n");
     kd->alfabeto = (char*) malloc(sizeof(char) * (strlen(token)+1));
     strcpy(kd->alfabeto, token);

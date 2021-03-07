@@ -12,8 +12,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5bcaa253-dc8c-486d-9b11-6666cdece04a" name="Default Changelist" comment="FINALE">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/CMakeFiles/playfair.dir/key.c.o" beforeDir="false" afterPath="$PROJECT_DIR$/build/CMakeFiles/playfair.dir/key.c.o" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/playfair" beforeDir="false" afterPath="$PROJECT_DIR$/build/playfair" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/Testing/Temporary/LastTest.log" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Testing/Temporary/LastTest.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/key.c" beforeDir="false" afterPath="$PROJECT_DIR$/key.c" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -39,15 +41,11 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="cf.first.check.clang-format" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="CPPToolchains" />
   </component>
   <component name="RunManager">
-    <configuration default="true" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" PASS_PARENT_ENVS_2="true">
-      <method v="2">
-        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="playfair" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="playfair" TARGET_NAME="playfair" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="playfair" RUN_TARGET_NAME="playfair">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
@@ -68,6 +66,9 @@
       <workItem from="1614948280963" duration="303000" />
       <workItem from="1614987549383" duration="1248000" />
       <workItem from="1615041599825" duration="1585000" />
+      <workItem from="1615075169420" duration="284000" />
+      <workItem from="1615075489920" duration="52000" />
+      <workItem from="1615075864608" duration="315000" />
     </task>
     <task id="LOCAL-00001" summary="1.0">
       <created>1614941484830</created>
