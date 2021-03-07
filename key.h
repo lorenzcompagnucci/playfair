@@ -18,10 +18,10 @@ typedef struct key {
 
 key* get_key(char* keyPath);
 key_data* get_key_data(char* buffer);
-void set_matrix(key* chiavee);
-void loop_on_matrix(key* chiave, char c);
-void set_chars(key* chiave);
-void free_key(key* key);
+void set_matrix(key* k);
+void loop_on_matrix(key* k, char c);
+void set_chars(key* k);
+void free_key(key* k);
 void free_key_data(key_data* kd);
 
 #endif //PLAYFAIR_KEY_H

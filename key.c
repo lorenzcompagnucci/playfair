@@ -19,7 +19,7 @@ key* get_key(char* keyPath) {
     return k;
 }
 
-key_data *get_key_data(char* buffer) {
+key_data* get_key_data(char* buffer) {
     key_data* kd = (key_data*) malloc(sizeof(key_data));
     char* token = strtok(buffer, "\r\n");
     kd->alfabeto = (char*) malloc(sizeof(char) * (strlen(token)+1));
@@ -36,38 +36,38 @@ key_data *get_key_data(char* buffer) {
     return kd;
 }
 
-void set_matrix(key* key) {
-    for (int i = 0; i < strlen(key->kd->chiave); i++) {
-        loop_on_matrix(key, key->kd->chiave[i]);
+void set_matrix(key* k) {
+    for (int i = 0; i < strlen(k->kd->chiave); i++) {
+        loop_on_matrix(k, k->kd->chiave[i]);
     }
-    for (int i = 0; i < strlen(key->kd->alfabeto); i++) {
-        loop_on_matrix(key, key->kd->alfabeto[i]);
+    for (int i = 0; i < strlen(k->kd->alfabeto); i++) {
+        loop_on_matrix(k, k->kd->alfabeto[i]);
     }
 }
 
-void loop_on_matrix(key* chiave, char c) {
+void loop_on_matrix(key* k, char c) {
     int counter = 0;
     for (int m = 0; m < 5 && counter == 0; m++) {
         for (int n = 0; n < 5 && counter == 0; n++) {
-            if (chiave->matrice[m][n] == c) {
+            if (k->matrice[m][n] == c) {
                 counter++;
-            } else if (chiave->matrice[m][n] == 0 && counter == 0) {
-                chiave->matrice[m][n] = c;
+            } else if (k->matrice[m][n] == 0 && counter == 0) {
+                k->matrice[m][n] = c;
                 counter++;
             }
         }
     }
 }
 
-void set_chars(key* chiave) {
-    chiave->sostituto = chiave->kd->sostituto[0];
-    chiave->speciale = chiave->kd->speciale[0];
+void set_chars(key* k) {
+    k->sostituto = k->kd->sostituto[0];
+    k->speciale = k->kd->speciale[0];
     for (char x = 'A'; x <= 'Z'; x++) {
-        chiave->mancante = x;
+        k->mancante = x;
         int counter = 0;
         for (int i = 0; i < 5 && counter == 0; i++) {
             for (int j = 0; j < 5 && counter == 0; j++) {
-                if (x == chiave->matrice[i][j]) {
+                if (x == k->matrice[i][j]) {
                     counter = 1;
                 }
             }
@@ -78,16 +78,16 @@ void set_chars(key* chiave) {
     }
 }
 
-void free_key(key* key) {
-    free_key_data(key->kd);
+void free_key(key* k) {
+    free_key_data(k->kd);
     for (int i = 0; i < 5; i++) {
-        free(key->matrice[i]);
-        key->matrice[i] = NULL;
+        free(k->matrice[i]);
+        k->matrice[i] = NULL;
     }
-    free(key->matrice);
-    key->matrice = NULL;
-    free(key);
-    key = NULL;
+    free(k->matrice);
+    k->matrice = NULL;
+    free(k);
+    k = NULL;
 }
 
 void free_key_data(key_data* kd) {
