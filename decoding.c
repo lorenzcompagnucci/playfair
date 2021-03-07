@@ -15,25 +15,16 @@ void decode_file(key* chiave, char* outputDir, char* inputFile) {
     free(outputPath);
     outputPath = NULL;
     fix_missing_chars(chiave, message);
-    decode_messagge(chiave, message, fout);
-    fclose(fout);
-    free(message);
-    message = NULL;
-}
-
-void decode_messagge(key* chiave, char* message, FILE* fout) {
+    char l1, l2;
     for (int i = 0; i < strlen(message); i++) {
-        char l1 = message[i];
-        char l2 = message[i+1];
-        if (l1 != l2 && l2 != '\0') {
-            i++;
-        } else {
-            l2 = chiave->speciale;
-        }
+        create_couples(message, chiave, &l1, &l2, &i);
         decode_couple(chiave, &l1, &l2);
         fprintf(fout, "%c%c ", l1, l2);
         fflush(fout);
     }
+    fclose(fout);
+    free(message);
+    message = NULL;
 }
 
 void decode_couple(key* chiave, char* l1, char* l2) {
