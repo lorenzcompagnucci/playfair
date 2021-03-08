@@ -35,9 +35,11 @@ CMakeFiles/playfair.dir/key.c.o
  /home/lorenzo/CLionProjects/playfair/key.h
  /home/lorenzo/CLionProjects/playfair/mem_utils.h
 CMakeFiles/playfair.dir/keygen.c.o
+ /home/lorenzo/CLionProjects/playfair/directory.h
  /home/lorenzo/CLionProjects/playfair/file.h
  /home/lorenzo/CLionProjects/playfair/keygen.c
  /home/lorenzo/CLionProjects/playfair/keygen.h
+ /home/lorenzo/CLionProjects/playfair/mem_utils.h
 CMakeFiles/playfair.dir/main.c.o
  /home/lorenzo/CLionProjects/playfair/decoding.h
  /home/lorenzo/CLionProjects/playfair/encoding.h

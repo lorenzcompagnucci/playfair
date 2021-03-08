@@ -1,18 +1,23 @@
 #include <stdio.h>
 #include <string.h>
 #include <stdlib.h>
+#include <libgen.h>
 #include <ctype.h>
 
 #include "keygen.h"
 #include "file.h"
+#include "mem_utils.h"
+#include "directory.h"
 
 void create_key(char* path, char* alphabet, char* replace, char* special, char* keyword) {
     check_alphabet(alphabet);
     char replace_char = check_char(replace, REPLACEMENT_CHAR);
     char special_char = check_char(special, SPECIAL_CHAR);
     check_key(keyword);
-    FILE* fp = fopen(path, "w");
+    char* file = generate_key_path(path);
+    FILE* fp = fopen(file, "w");
     check_file(fp, OUT_KEY_ERROR);
+    free_string(file);
     fprintf(fp, "%s\r\n%c\r\n%c\r\n%s\r\n", alphabet, replace_char, special_char, keyword);
     fflush(fp);
     fclose(fp);
@@ -74,4 +79,12 @@ void check_key(char* keyword) {
             exit(0);
         }
     }
+}
+
+char* generate_key_path(char* path) {
+    char *file = (char*) malloc(sizeof(char) * (strlen(path)+1));
+    check_string(file, "ERROR WHILE ALLOCATING MEMORY.\n");
+    strcpy(file, path);
+    check_directory(dirname(path));
+    return file;
 }

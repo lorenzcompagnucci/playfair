@@ -10,5 +10,6 @@ void check_alphabet(char* alphabet);
 char check_char(char* line, char* type_char);
 void check_reps(int** check, char c, int i);
 void check_key(char* keyword);
+char* generate_key_path(char* path);
 
 #endif //PLAYFAIR_KEYGEN_H

@@ -10,6 +10,8 @@
 key.h
 /home/lorenzo/CLionProjects/playfair/key.h
 
+/home/lorenzo/CLionProjects/playfair/directory.h
+
 /home/lorenzo/CLionProjects/playfair/encoding.h
 key.h
 /home/lorenzo/CLionProjects/playfair/key.h
@@ -27,12 +29,18 @@ string.h
 -
 stdlib.h
 -
+libgen.h
+-
 ctype.h
 -
 keygen.h
 /home/lorenzo/CLionProjects/playfair/keygen.h
 file.h
 /home/lorenzo/CLionProjects/playfair/file.h
+mem_utils.h
+/home/lorenzo/CLionProjects/playfair/mem_utils.h
+directory.h
+/home/lorenzo/CLionProjects/playfair/directory.h
 
 /home/lorenzo/CLionProjects/playfair/keygen.h
 
@@ -49,4 +57,6 @@ encoding.h
 /home/lorenzo/CLionProjects/playfair/encoding.h
 decoding.h
 /home/lorenzo/CLionProjects/playfair/decoding.h
+
+/home/lorenzo/CLionProjects/playfair/mem_utils.h
 

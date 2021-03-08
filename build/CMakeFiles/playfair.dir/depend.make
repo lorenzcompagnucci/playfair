@@ -34,9 +34,11 @@ CMakeFiles/playfair.dir/key.c.o: ../key.c
 CMakeFiles/playfair.dir/key.c.o: ../key.h
 CMakeFiles/playfair.dir/key.c.o: ../mem_utils.h
 
+CMakeFiles/playfair.dir/keygen.c.o: ../directory.h
 CMakeFiles/playfair.dir/keygen.c.o: ../file.h
 CMakeFiles/playfair.dir/keygen.c.o: ../keygen.c
 CMakeFiles/playfair.dir/keygen.c.o: ../keygen.h
+CMakeFiles/playfair.dir/keygen.c.o: ../mem_utils.h
 
 CMakeFiles/playfair.dir/main.c.o: ../decoding.h
 CMakeFiles/playfair.dir/main.c.o: ../encoding.h
