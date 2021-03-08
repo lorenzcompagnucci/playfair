@@ -16,7 +16,7 @@ void create_key(char* path, char* alphabet, char* replace, char* special, char* 
     check_key(keyword);
     char* file = generate_key_path(path);
     FILE* fp = fopen(file, "w");
-    check_file(fp, OUT_KEY_ERROR);
+    check_file(fp, OUT_FILE_ERROR);
     free_string(file);
     fprintf(fp, "%s\r\n%c\r\n%c\r\n%s\r\n", alphabet, replace_char, special_char, keyword);
     fflush(fp);
@@ -28,34 +28,27 @@ void check_alphabet(char* alphabet) {
         printf("THE ALPHABET MUST BE MADE OF 25 CHARS.\n");
         exit(0);
     }
-    int** check = (int**) malloc(sizeof(int*) * 25);
-    for (int i = 0; i < 25; ++i) {
-        check[i] = (int*) malloc(sizeof(int) * 2);
-    }
+    char* check = (char*) calloc(25, sizeof(char));
+    check_string(check, ALPHABET_CHECK_ERROR);
     for (int i = 0; i < 25; i++) {
         check_reps(check, alphabet[i], i);
     }
-    for (int i = 0; i < 25; ++i) {
-        free(check[i]);
-        check[i] = NULL;
-    }
-    free(check);
+    free_string(check);
 }
 
-void check_reps(int** check, char c, int i) {
+void check_reps(char* check, char c, int i) {
     char a = toupper(c);
     if (a < 'A' || a > 'Z') {
         printf("A CHARCTER OF THE ALPHABET IS NOT A LETTER.\n");
         exit(0);
     }
     for (int j = 0; j < 25; ++j) {
-        if (check[j][0] == a && check[j][1] == 1) {
+        if (check[j] == a) {
             printf("THE ALPHABET HAS TO CONTAIN 25 DIFFERENT CHARACTERS.\n");
             exit(0);
         }
     }
-    check[i][0] = a;
-    check[i][1] = 1;
+    check[i] = a;
 }
 
 char check_char(char* line, char* type_char) {
@@ -83,7 +76,7 @@ void check_key(char* keyword) {
 
 char* generate_key_path(char* path) {
     char *file = (char*) malloc(sizeof(char) * (strlen(path)+1));
-    check_string(file, "ERROR WHILE ALLOCATING MEMORY.\n");
+    check_string(file, FILE_CHECK_ERROR);
     strcpy(file, path);
     check_directory(dirname(path));
     return file;
