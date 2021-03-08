@@ -6,13 +6,23 @@
 
 #IncludeRegexTransform: 
 
-/home/lorenzo/CLionProjects/playfair/elab_utils.c
-elab_utils.h
-/home/lorenzo/CLionProjects/playfair/elab_utils.h
+/home/lorenzo/CLionProjects/playfair/file.h
+stdio.h
+-
 
-/home/lorenzo/CLionProjects/playfair/elab_utils.h
-key.h
-/home/lorenzo/CLionProjects/playfair/key.h
+/home/lorenzo/CLionProjects/playfair/keygen.c
+stdio.h
+-
+string.h
+-
+stdlib.h
+-
+ctype.h
+-
+keygen.h
+/home/lorenzo/CLionProjects/playfair/keygen.h
+file.h
+/home/lorenzo/CLionProjects/playfair/file.h
 
-/home/lorenzo/CLionProjects/playfair/key.h
+/home/lorenzo/CLionProjects/playfair/keygen.h
 
