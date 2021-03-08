@@ -6,9 +6,9 @@
 #define SPECIAL_CHAR "SPECIAL CHAR"
 
 void create_key(char* path, char* alfabeto, char* sostituto, char* speciale, char* chiave);
-char* check_alphabet(char* alphabet);
+void check_alphabet(char* alphabet);
 char check_char(char* line, char* type_char);
-void check_reps(int* check, char c, int i);
-char* check_key(char* keyword);
+void check_reps(int** check, char c, int i);
+void check_key(char* keyword);
 
 #endif //PLAYFAIR_KEYGEN_H

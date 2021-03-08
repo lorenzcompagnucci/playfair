@@ -6,11 +6,11 @@
 #include "keygen.h"
 #include "file.h"
 
-void create_key(char* path, char* alfabeto, char* sostituto, char* speciale, char* chiave) {
-    char* alphabet = check_alphabet(alfabeto);
-    char replace_char = check_char(sostituto, REPLACEMENT_CHAR);
-    char special_char = check_char(speciale, SPECIAL_CHAR);
-    char* keyword = check_key(chiave);
+void create_key(char* path, char* alphabet, char* replace, char* special, char* keyword) {
+    check_alphabet(alphabet);
+    char replace_char = check_char(replace, REPLACEMENT_CHAR);
+    char special_char = check_char(special, SPECIAL_CHAR);
+    check_key(keyword);
     FILE* fp = fopen(path, "w");
     check_file(fp, OUT_KEY_ERROR);
     fprintf(fp, "%s\r\n%c\r\n%c\r\n%s\r\n", alphabet, replace_char, special_char, keyword);
@@ -18,30 +18,39 @@ void create_key(char* path, char* alfabeto, char* sostituto, char* speciale, cha
     fclose(fp);
 }
 
-char* check_alphabet(char* alphabet) {
+void check_alphabet(char* alphabet) {
     if (strlen(alphabet) != 25) {
         printf("THE ALPHABET MUST BE MADE OF 25 CHARS.\n");
         exit(0);
     }
-    int check[25];
+    int** check = (int**) malloc(sizeof(int*) * 25);
+    for (int i = 0; i < 25; ++i) {
+        check[i] = (int*) malloc(sizeof(int) * 2);
+    }
     for (int i = 0; i < 25; i++) {
-        check[i] = 0;
         check_reps(check, alphabet[i], i);
     }
-    return alphabet;
+    for (int i = 0; i < 25; ++i) {
+        free(check[i]);
+        check[i] = NULL;
+    }
+    free(check);
 }
 
-void check_reps(int* check, char c, int i) {
+void check_reps(int** check, char c, int i) {
     char a = toupper(c);
     if (a < 'A' || a > 'Z') {
         printf("A CHARCTER OF THE ALPHABET IS NOT A LETTER.\n");
         exit(0);
     }
-    if (check[i] == 1) {
-        printf("THE ALPHABET HAS TO CONTAIN 25 DIFFERENT CHARACTERS.\n");
-        exit(0);
+    for (int j = 0; j < 25; ++j) {
+        if (check[j][0] == a && check[j][1] == 1) {
+            printf("THE ALPHABET HAS TO CONTAIN 25 DIFFERENT CHARACTERS.\n");
+            exit(0);
+        }
     }
-    check[i] = 1;
+    check[i][0] = a;
+    check[i][1] = 1;
 }
 
 char check_char(char* line, char* type_char) {
@@ -57,7 +66,7 @@ char check_char(char* line, char* type_char) {
     return c;
 }
 
-char* check_key(char* keyword) {
+void check_key(char* keyword) {
     for (int i = 0; i < strlen(keyword); i++) {
         char c = toupper(keyword[i]);
         if (c < 'A' || c > 'Z') {
@@ -65,5 +74,4 @@ char* check_key(char* keyword) {
             exit(0);
         }
     }
-    return keyword;
 }
