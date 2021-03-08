@@ -4,10 +4,10 @@ void create_couple(char* message, key* chiave, char* l1, char* l2, int *i) {
     *l1 = message[*i];
     *l2 = message[*i+1];
     if (*l1 == chiave->mancante) {
-        *l1 = chiave->speciale;
+        *l1 = chiave->sostituto;
     }
     if (*l2 == chiave->mancante) {
-        *l2 = chiave->speciale;
+        *l2 = chiave->sostituto;
     }
     if (*l1 != *l2 && *l2 != '\0') {
         *i += 1;
