@@ -31,12 +31,12 @@ void check_alphabet(char* alphabet) {
     char* check = (char*) calloc(25, sizeof(char));
     check_string(check, ALPHABET_CHECK_ERROR);
     for (int i = 0; i < 25; i++) {
-        check_reps(check, alphabet[i], i);
+        alphabet[i] = check_reps(check, alphabet[i], i);
     }
     free_string(check);
 }
 
-void check_reps(char* check, char c, int i) {
+char check_reps(char* check, char c, int i) {
     char a = toupper(c);
     if (a < 'A' || a > 'Z') {
         printf("A CHARCTER OF THE ALPHABET IS NOT A LETTER.\n");
@@ -49,6 +49,7 @@ void check_reps(char* check, char c, int i) {
         }
     }
     check[i] = a;
+    return a;
 }
 
 char check_char(char* line, char* type_char) {
@@ -71,6 +72,7 @@ void check_key(char* keyword) {
             printf("A CHAR OF THE KEYWORD IS NOT A LETTER.\n");
             exit(0);
         }
+        keyword[i] = c;
     }
 }
 
