@@ -28,28 +28,20 @@ void check_alphabet(char* alphabet) {
         printf("THE ALPHABET MUST BE MADE OF 25 CHARS.\n");
         exit(0);
     }
-    char* check = (char*) calloc(25, sizeof(char));
-    check_string(check, ALPHABET_CHECK_ERROR);
-    for (int i = 0; i < 25; i++) {
-        alphabet[i] = check_reps(check, alphabet[i], i);
-    }
-    free_string(check);
-}
-
-char check_reps(char* check, char c, int i) {
-    char a = toupper(c);
-    if (a < 'A' || a > 'Z') {
-        printf("A CHARCTER OF THE ALPHABET IS NOT A LETTER.\n");
-        exit(0);
-    }
-    for (int j = 0; j < 25; ++j) {
-        if (toupper(check[j]) == a) {
-            printf("THE ALPHABET HAS TO CONTAIN 25 DIFFERENT CHARACTERS.\n");
+    for (int i = 0; i < strlen(alphabet); ++i) {
+        char c = toupper(alphabet[i]);
+        if (c >= 'A' || c <= 'Z') {
+            for (int j = 0; j < strlen(alphabet); ++j) {
+                if (i != j && c == toupper(alphabet[j])) {
+                    printf("CHAR '%c' IS PRESENT MORE THAN ONCE.\n", c);
+                    exit(0);
+                }
+            }
+        } else {
+            printf("CHAR IN POS %d OF THE ALPHABET IS NOT A CHARACTER.\n", i+1);
             exit(0);
         }
     }
-    check[i] = a;
-    return a;
 }
 
 char check_char(char* line, char* type_char) {
