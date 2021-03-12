@@ -8,9 +8,23 @@
 char* read_file(char* inputFile) {
     FILE* fin = fopen(inputFile, "r");
     check_file(fin, INP_FILE_ERROR);
-    char* buffer = (char*) malloc(sizeof(char) * (file_size(fin)+1));
-    reader(fin, buffer);
+    char* buffer = reader(fin);
     fclose(fin);
+    return buffer;
+}
+
+char* reader(FILE* fin) {
+    char* buffer = (char*) malloc(sizeof(char) * (file_size(fin)+1));
+    check_string(buffer, INP_BUFF_ERROR);
+    int i = 0;
+    char c;
+    while ((c = toupper(fgetc(fin))) != EOF) {
+        if ((c >= 'A' && c <= 'Z') || c == '\r' || c == '\n') {
+            buffer[i] = c;
+            i++;
+        }
+    }
+    buffer[i] = '\0';
     return buffer;
 }
 
@@ -19,19 +33,6 @@ long int file_size(FILE* fp) {
     long int size = ftell(fp);
     rewind(fp);
     return size;
-}
-
-void reader(FILE* fin, char* buffer) {
-    check_string(buffer, INP_BUFF_ERROR);
-    int i = 0;
-    char c;
-    while ((c = fgetc(fin)) != EOF) {
-        if ((c >= 'A' && c <= 'Z') || (c >= 'a' && c <= 'z') || c == '\r' || c == '\n') {
-            buffer[i] = toupper(c);
-            i++;
-        }
-    }
-    buffer[i] = '\0';
 }
 
 void check_file(FILE* fp, char* errmessage) {

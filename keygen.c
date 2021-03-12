@@ -43,7 +43,7 @@ char check_reps(char* check, char c, int i) {
         exit(0);
     }
     for (int j = 0; j < 25; ++j) {
-        if (check[j] == a) {
+        if (toupper(check[j]) == a) {
             printf("THE ALPHABET HAS TO CONTAIN 25 DIFFERENT CHARACTERS.\n");
             exit(0);
         }

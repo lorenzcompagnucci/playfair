@@ -6,21 +6,11 @@
 
 #IncludeRegexTransform: 
 
-/home/lorenzo/CLionProjects/playfair/decoding.h
-key.h
-/home/lorenzo/CLionProjects/playfair/key.h
-
 /home/lorenzo/CLionProjects/playfair/directory.h
-
-/home/lorenzo/CLionProjects/playfair/encoding.h
-key.h
-/home/lorenzo/CLionProjects/playfair/key.h
 
 /home/lorenzo/CLionProjects/playfair/file.h
 stdio.h
 -
-
-/home/lorenzo/CLionProjects/playfair/key.h
 
 /home/lorenzo/CLionProjects/playfair/keygen.c
 stdio.h
@@ -43,20 +33,6 @@ directory.h
 /home/lorenzo/CLionProjects/playfair/directory.h
 
 /home/lorenzo/CLionProjects/playfair/keygen.h
-
-/home/lorenzo/CLionProjects/playfair/main.c
-stdio.h
--
-string.h
--
-keygen.h
-/home/lorenzo/CLionProjects/playfair/keygen.h
-key.h
-/home/lorenzo/CLionProjects/playfair/key.h
-encoding.h
-/home/lorenzo/CLionProjects/playfair/encoding.h
-decoding.h
-/home/lorenzo/CLionProjects/playfair/decoding.h
 
 /home/lorenzo/CLionProjects/playfair/mem_utils.h
 
