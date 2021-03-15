@@ -86,10 +86,7 @@ void set_chars(key* k) {
 
 void free_key(key* k) {
     free_key_data(k->kd);
-    for (int i = 0; i < 5; i++) {
-        free_string(k->matrice[i]);
-    }
-    free_matrix(k->matrice);
+    free_matrix(k->matrice, 5);
     free(k);
     k = NULL;
 }

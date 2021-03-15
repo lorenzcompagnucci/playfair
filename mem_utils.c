@@ -17,8 +17,11 @@ void check_string(char* string, char* errmessage) {
     }
 }
 
-void free_matrix(char** matrix) {
+void free_matrix(char** matrix, int rows) {
     if (matrix != NULL) {
+        for (int i = 0; i < rows; i++) {
+            free_string(matrix[i]);
+        }
         free(matrix);
         matrix = NULL;
     }

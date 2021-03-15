@@ -3,7 +3,7 @@
 
 void free_string(char* string);
 void check_string(char* string, char* errmessage);
-void free_matrix(char** matrix);
+void free_matrix(char** matrix, int rows);
 void check_matrix(char** matrix, char* errmessage);
 
 #endif //PLAYFAIR_MEM_UTILS_H

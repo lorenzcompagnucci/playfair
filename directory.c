@@ -16,7 +16,9 @@ char* get_directory(char* outputDir, char* inputFile, char* format) {
     check_directory(outputDir);
     char* outputPath = (char*) malloc((strlen(outputDir) + 1) * sizeof(char) + sizeof(outputFile));
     check_string(outputPath, DIR_O);
-    strcat(strcat(strcpy(outputPath, outputDir), "/"), outputFile);
+    strcpy(outputPath, outputDir);
+    strcat(outputPath, "/");
+    strcat(outputPath, outputFile);
     free_string(outputFile);
     return outputPath;
 }

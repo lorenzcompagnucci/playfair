@@ -23,14 +23,14 @@ int main(int argc, char *argv[]) {
     }
     if (strcmp(argv[1], "encode") == 0) {
         key* key = get_key(argv[2]);
-        for (int i = 4; i < argc; ++i) {
+        for (int i = 4; i < argc; i++) {
             encode_file(key, argv[3], argv[i]);
         }
         free_key(key);
         return 1;
     } else if (strcmp(argv[1], "decode") == 0) {
         key* key = get_key(argv[2]);
-        for (int i = 4; i < argc; ++i) {
+        for (int i = 4; i < argc; i++) {
             decode_file(key, argv[3], argv[i]);
         }
         free_key(key);
