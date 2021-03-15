@@ -9,12 +9,12 @@
 #include "mem_utils.h"
 
 char* get_directory(char* outputDir, char* inputFile, char* format) {
-    char *outputFile = (char*) malloc((strlen(basename(inputFile))+5) * sizeof(char));
+    char *outputFile = (char*) malloc((strlen(basename(inputFile)) + strlen(format) + 1) * sizeof(char));
     check_string(outputFile, FILE_O);
     strcpy(outputFile, basename(inputFile));
     modify_extension(outputFile, format);
     check_directory(outputDir);
-    char* outputPath = (char*) malloc((strlen(outputDir)+1)*sizeof(char) + sizeof(outputFile));
+    char* outputPath = (char*) malloc((strlen(outputDir) + 1) * sizeof(char) + sizeof(outputFile));
     check_string(outputPath, DIR_O);
     strcat(strcat(strcpy(outputPath, outputDir), "/"), outputFile);
     free_string(outputFile);
