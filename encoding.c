@@ -23,7 +23,7 @@ void encode_file(key* chiave, char* outputDir, char* inputFile) {
     free_string(message);
 }
 
-void encode_couple(key* chiave, char *couple) {
+void encode_couple(key* chiave, char* couple) {
     int r1 = -1, c1, r2 = -1, c2;
     find_positions(chiave, couple[0], &r1, &c1);
     find_positions(chiave, couple[1], &r2, &c2);
