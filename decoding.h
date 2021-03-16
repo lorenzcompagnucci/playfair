@@ -4,6 +4,6 @@
 #include "key.h"
 
 void decode_file(key* chiave, char* outputDir, char* inputFile);
-void decode_couple(key* chiave, char* l1, char* l2);
+void decode_couple(key* chiave, char* couple);
 
 #endif //PLAYFAIR_DECODING_H

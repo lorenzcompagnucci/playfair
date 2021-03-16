@@ -14,11 +14,12 @@
     <list default="true" id="5bcaa253-dc8c-486d-9b11-6666cdece04a" name="Default Changelist" comment="FINALE">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/Testing/Temporary/LastTest.log" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Testing/Temporary/LastTest.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/directory.c" beforeDir="false" afterPath="$PROJECT_DIR$/directory.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/key.c" beforeDir="false" afterPath="$PROJECT_DIR$/key.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.c" beforeDir="false" afterPath="$PROJECT_DIR$/main.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mem_utils.c" beforeDir="false" afterPath="$PROJECT_DIR$/mem_utils.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mem_utils.h" beforeDir="false" afterPath="$PROJECT_DIR$/mem_utils.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/decoding.c" beforeDir="false" afterPath="$PROJECT_DIR$/decoding.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/decoding.h" beforeDir="false" afterPath="$PROJECT_DIR$/decoding.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/elab_utils.c" beforeDir="false" afterPath="$PROJECT_DIR$/elab_utils.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/elab_utils.h" beforeDir="false" afterPath="$PROJECT_DIR$/elab_utils.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/encoding.c" beforeDir="false" afterPath="$PROJECT_DIR$/encoding.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/encoding.h" beforeDir="false" afterPath="$PROJECT_DIR$/encoding.h" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -51,11 +52,6 @@
     <configuration name="playfair" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="playfair" TARGET_NAME="playfair" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="playfair" RUN_TARGET_NAME="playfair">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
-      </method>
-    </configuration>
-    <configuration default="true" type="GradleAppRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" PASS_PARENT_ENVS_2="true">
-      <method v="2">
-        <option name="com.jetbrains.cidr.cpp.gradle.execution.GradleNativeBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
     </configuration>
   </component>
@@ -99,7 +95,10 @@
       <workItem from="1615389117915" duration="261000" />
       <workItem from="1615548251868" duration="600000" />
       <workItem from="1615561950441" duration="1991000" />
-      <workItem from="1615840913816" duration="676000" />
+      <workItem from="1615840913816" duration="774000" />
+      <workItem from="1615918181969" duration="125000" />
+      <workItem from="1615918736734" duration="282000" />
+      <workItem from="1615933632609" duration="615000" />
     </task>
     <task id="LOCAL-00001" summary="1.0">
       <created>1614941484830</created>
@@ -241,7 +240,14 @@
       <option name="project" value="LOCAL" />
       <updated>1615548690241</updated>
     </task>
-    <option name="localTasksCounter" value="21" />
+    <task id="LOCAL-00021" summary="FINALE">
+      <created>1615841606966</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1615841606966</updated>
+    </task>
+    <option name="localTasksCounter" value="22" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
