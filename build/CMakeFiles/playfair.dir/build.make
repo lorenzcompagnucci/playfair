@@ -122,35 +122,22 @@ CMakeFiles/playfair.dir/directory.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/playfair.dir/directory.c.s"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/lorenzo/CLionProjects/playfair/directory.c -o CMakeFiles/playfair.dir/directory.c.s
 
-CMakeFiles/playfair.dir/encoding.c.o: CMakeFiles/playfair.dir/flags.make
-CMakeFiles/playfair.dir/encoding.c.o: ../encoding.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/lorenzo/CLionProjects/playfair/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building C object CMakeFiles/playfair.dir/encoding.c.o"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/playfair.dir/encoding.c.o   -c /home/lorenzo/CLionProjects/playfair/encoding.c
+CMakeFiles/playfair.dir/coding.c.o: CMakeFiles/playfair.dir/flags.make
+CMakeFiles/playfair.dir/coding.c.o: ../coding.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/lorenzo/CLionProjects/playfair/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building C object CMakeFiles/playfair.dir/coding.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/playfair.dir/coding.c.o   -c /home/lorenzo/CLionProjects/playfair/coding.c
 
-CMakeFiles/playfair.dir/encoding.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/playfair.dir/encoding.c.i"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/lorenzo/CLionProjects/playfair/encoding.c > CMakeFiles/playfair.dir/encoding.c.i
+CMakeFiles/playfair.dir/coding.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/playfair.dir/coding.c.i"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/lorenzo/CLionProjects/playfair/coding.c > CMakeFiles/playfair.dir/coding.c.i
 
-CMakeFiles/playfair.dir/encoding.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/playfair.dir/encoding.c.s"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/lorenzo/CLionProjects/playfair/encoding.c -o CMakeFiles/playfair.dir/encoding.c.s
-
-CMakeFiles/playfair.dir/decoding.c.o: CMakeFiles/playfair.dir/flags.make
-CMakeFiles/playfair.dir/decoding.c.o: ../decoding.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/lorenzo/CLionProjects/playfair/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building C object CMakeFiles/playfair.dir/decoding.c.o"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/playfair.dir/decoding.c.o   -c /home/lorenzo/CLionProjects/playfair/decoding.c
-
-CMakeFiles/playfair.dir/decoding.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/playfair.dir/decoding.c.i"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/lorenzo/CLionProjects/playfair/decoding.c > CMakeFiles/playfair.dir/decoding.c.i
-
-CMakeFiles/playfair.dir/decoding.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/playfair.dir/decoding.c.s"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/lorenzo/CLionProjects/playfair/decoding.c -o CMakeFiles/playfair.dir/decoding.c.s
+CMakeFiles/playfair.dir/coding.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/playfair.dir/coding.c.s"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/lorenzo/CLionProjects/playfair/coding.c -o CMakeFiles/playfair.dir/coding.c.s
 
 CMakeFiles/playfair.dir/keygen.c.o: CMakeFiles/playfair.dir/flags.make
 CMakeFiles/playfair.dir/keygen.c.o: ../keygen.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/lorenzo/CLionProjects/playfair/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building C object CMakeFiles/playfair.dir/keygen.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/lorenzo/CLionProjects/playfair/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building C object CMakeFiles/playfair.dir/keygen.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/playfair.dir/keygen.c.o   -c /home/lorenzo/CLionProjects/playfair/keygen.c
 
 CMakeFiles/playfair.dir/keygen.c.i: cmake_force
@@ -163,7 +150,7 @@ CMakeFiles/playfair.dir/keygen.c.s: cmake_force
 
 CMakeFiles/playfair.dir/mem_utils.c.o: CMakeFiles/playfair.dir/flags.make
 CMakeFiles/playfair.dir/mem_utils.c.o: ../mem_utils.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/lorenzo/CLionProjects/playfair/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building C object CMakeFiles/playfair.dir/mem_utils.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/lorenzo/CLionProjects/playfair/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building C object CMakeFiles/playfair.dir/mem_utils.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/playfair.dir/mem_utils.c.o   -c /home/lorenzo/CLionProjects/playfair/mem_utils.c
 
 CMakeFiles/playfair.dir/mem_utils.c.i: cmake_force
@@ -181,8 +168,7 @@ playfair_OBJECTS = \
 "CMakeFiles/playfair.dir/key.c.o" \
 "CMakeFiles/playfair.dir/file.c.o" \
 "CMakeFiles/playfair.dir/directory.c.o" \
-"CMakeFiles/playfair.dir/encoding.c.o" \
-"CMakeFiles/playfair.dir/decoding.c.o" \
+"CMakeFiles/playfair.dir/coding.c.o" \
 "CMakeFiles/playfair.dir/keygen.c.o" \
 "CMakeFiles/playfair.dir/mem_utils.c.o"
 
@@ -194,13 +180,12 @@ playfair: CMakeFiles/playfair.dir/elab_utils.c.o
 playfair: CMakeFiles/playfair.dir/key.c.o
 playfair: CMakeFiles/playfair.dir/file.c.o
 playfair: CMakeFiles/playfair.dir/directory.c.o
-playfair: CMakeFiles/playfair.dir/encoding.c.o
-playfair: CMakeFiles/playfair.dir/decoding.c.o
+playfair: CMakeFiles/playfair.dir/coding.c.o
 playfair: CMakeFiles/playfair.dir/keygen.c.o
 playfair: CMakeFiles/playfair.dir/mem_utils.c.o
 playfair: CMakeFiles/playfair.dir/build.make
 playfair: CMakeFiles/playfair.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/lorenzo/CLionProjects/playfair/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Linking C executable playfair"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/lorenzo/CLionProjects/playfair/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Linking C executable playfair"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/playfair.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

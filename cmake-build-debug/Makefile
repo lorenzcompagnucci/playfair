@@ -59,10 +59,10 @@ cmake_force:
 SHELL = /bin/sh
 
 # The CMake executable.
-CMAKE_COMMAND = /snap/clion/139/bin/cmake/linux/bin/cmake
+CMAKE_COMMAND = /snap/clion/145/bin/cmake/linux/bin/cmake
 
 # The command to remove a file.
-RM = /snap/clion/139/bin/cmake/linux/bin/cmake -E rm -f
+RM = /snap/clion/145/bin/cmake/linux/bin/cmake -E rm -f
 
 # Escaping for special characters.
 EQUALS = =
@@ -79,7 +79,7 @@ CMAKE_BINARY_DIR = /home/lorenzo/CLionProjects/playfair/cmake-build-debug
 # Special rule for the target rebuild_cache
 rebuild_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
-	/snap/clion/139/bin/cmake/linux/bin/cmake --regenerate-during-build -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+	/snap/clion/145/bin/cmake/linux/bin/cmake --regenerate-during-build -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
 .PHONY : rebuild_cache
 
 # Special rule for the target rebuild_cache
@@ -90,7 +90,7 @@ rebuild_cache/fast: rebuild_cache
 # Special rule for the target edit_cache
 edit_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
-	/snap/clion/139/bin/cmake/linux/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
+	/snap/clion/145/bin/cmake/linux/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
 .PHONY : edit_cache
 
 # Special rule for the target edit_cache
@@ -143,32 +143,32 @@ playfair/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/playfair.dir/build.make CMakeFiles/playfair.dir/build
 .PHONY : playfair/fast
 
-decoding.o: decoding.c.o
+coding.o: coding.c.o
 
-.PHONY : decoding.o
+.PHONY : coding.o
 
 # target to build an object file
-decoding.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/playfair.dir/build.make CMakeFiles/playfair.dir/decoding.c.o
-.PHONY : decoding.c.o
+coding.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/playfair.dir/build.make CMakeFiles/playfair.dir/coding.c.o
+.PHONY : coding.c.o
 
-decoding.i: decoding.c.i
+coding.i: coding.c.i
 
-.PHONY : decoding.i
+.PHONY : coding.i
 
 # target to preprocess a source file
-decoding.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/playfair.dir/build.make CMakeFiles/playfair.dir/decoding.c.i
-.PHONY : decoding.c.i
+coding.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/playfair.dir/build.make CMakeFiles/playfair.dir/coding.c.i
+.PHONY : coding.c.i
 
-decoding.s: decoding.c.s
+coding.s: coding.c.s
 
-.PHONY : decoding.s
+.PHONY : coding.s
 
 # target to generate assembly for a file
-decoding.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/playfair.dir/build.make CMakeFiles/playfair.dir/decoding.c.s
-.PHONY : decoding.c.s
+coding.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/playfair.dir/build.make CMakeFiles/playfair.dir/coding.c.s
+.PHONY : coding.c.s
 
 directory.o: directory.c.o
 
@@ -223,33 +223,6 @@ elab_utils.s: elab_utils.c.s
 elab_utils.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/playfair.dir/build.make CMakeFiles/playfair.dir/elab_utils.c.s
 .PHONY : elab_utils.c.s
-
-encoding.o: encoding.c.o
-
-.PHONY : encoding.o
-
-# target to build an object file
-encoding.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/playfair.dir/build.make CMakeFiles/playfair.dir/encoding.c.o
-.PHONY : encoding.c.o
-
-encoding.i: encoding.c.i
-
-.PHONY : encoding.i
-
-# target to preprocess a source file
-encoding.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/playfair.dir/build.make CMakeFiles/playfair.dir/encoding.c.i
-.PHONY : encoding.c.i
-
-encoding.s: encoding.c.s
-
-.PHONY : encoding.s
-
-# target to generate assembly for a file
-encoding.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/playfair.dir/build.make CMakeFiles/playfair.dir/encoding.c.s
-.PHONY : encoding.c.s
 
 file.o: file.c.o
 
@@ -395,18 +368,15 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... playfair"
-	@echo "... decoding.o"
-	@echo "... decoding.i"
-	@echo "... decoding.s"
+	@echo "... coding.o"
+	@echo "... coding.i"
+	@echo "... coding.s"
 	@echo "... directory.o"
 	@echo "... directory.i"
 	@echo "... directory.s"
 	@echo "... elab_utils.o"
 	@echo "... elab_utils.i"
 	@echo "... elab_utils.s"
-	@echo "... encoding.o"
-	@echo "... encoding.i"
-	@echo "... encoding.s"
 	@echo "... file.o"
 	@echo "... file.i"
 	@echo "... file.s"

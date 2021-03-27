@@ -3,4 +3,4 @@ project(playfair C)
 
 set(CMAKE_C_STANDARD 99)
 
-add_executable(playfair main.c elab_utils.c elab_utils.h key.c key.h file.c file.h directory.c directory.h encoding.c encoding.h decoding.c decoding.h keygen.c keygen.h mem_utils.h mem_utils.c)
+add_executable(playfair main.c elab_utils.c elab_utils.h key.c key.h file.c file.h directory.c directory.h coding.c coding.h keygen.c keygen.h mem_utils.h mem_utils.c)

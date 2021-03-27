@@ -8,7 +8,15 @@
 #include "directory.h"
 #include "mem_utils.h"
 
-char* get_directory(char* outputDir, char* inputFile, char* format) {
+char* get_directory(char* outputDir, char* inputFile, char* command) {
+    if (strcmp(command, "encode") == 0) {
+        return create_directory(outputDir, inputFile, ".pf");
+    } else {
+        return create_directory(outputDir, inputFile, ".dec");
+    }
+}
+
+char* create_directory(char* outputDir, char* inputFile, char* format) {
     char *outputFile = (char*) malloc((strlen(basename(inputFile)) + strlen(format) + 1) * sizeof(char));
     check_string(outputFile, FILE_O);
     strcpy(outputFile, basename(inputFile));
