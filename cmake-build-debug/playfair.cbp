@@ -86,12 +86,6 @@
 		<Unit filename="C:/Users/loren/CLionProjects/playfair/directory.h">
 			<Option target="playfair"/>
 		</Unit>
-		<Unit filename="C:/Users/loren/CLionProjects/playfair/elab_utils.c">
-			<Option target="playfair"/>
-		</Unit>
-		<Unit filename="C:/Users/loren/CLionProjects/playfair/elab_utils.h">
-			<Option target="playfair"/>
-		</Unit>
 		<Unit filename="C:/Users/loren/CLionProjects/playfair/file.c">
 			<Option target="playfair"/>
 		</Unit>

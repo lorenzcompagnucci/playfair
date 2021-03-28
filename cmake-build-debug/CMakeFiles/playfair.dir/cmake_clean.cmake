@@ -1,7 +1,6 @@
 file(REMOVE_RECURSE
   "CMakeFiles/playfair.dir/coding.c.obj"
   "CMakeFiles/playfair.dir/directory.c.obj"
-  "CMakeFiles/playfair.dir/elab_utils.c.obj"
   "CMakeFiles/playfair.dir/file.c.obj"
   "CMakeFiles/playfair.dir/key.c.obj"
   "CMakeFiles/playfair.dir/keygen.c.obj"

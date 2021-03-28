@@ -11,13 +11,7 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5bcaa253-dc8c-486d-9b11-6666cdece04a" name="Default Changelist" comment="FINALE">
-      <change beforePath="$PROJECT_DIR$/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeLists.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/coding.c" beforeDir="false" afterPath="$PROJECT_DIR$/coding.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/coding.h" beforeDir="false" afterPath="$PROJECT_DIR$/coding.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/elab_utils.c" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/elab_utils.h" beforeDir="false" />
-    </list>
+    <list default="true" id="5bcaa253-dc8c-486d-9b11-6666cdece04a" name="Default Changelist" comment="FINALE" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -46,9 +40,9 @@
     <property name="settings.editor.selected.configurable" value="CPPToolchains" />
   </component>
   <component name="RunManager">
-    <configuration default="true" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" PASS_PARENT_ENVS_2="true">
+    <configuration default="true" type="CLionExternalRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" PASS_PARENT_ENVS_2="true">
       <method v="2">
-        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+        <option name="CLION.EXTERNAL.BUILD" enabled="true" />
       </method>
     </configuration>
     <configuration name="playfair" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="playfair" TARGET_NAME="playfair" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="playfair" RUN_TARGET_NAME="playfair">
@@ -107,7 +101,7 @@
       <workItem from="1615918736734" duration="282000" />
       <workItem from="1615933632609" duration="615000" />
       <workItem from="1615934558130" duration="304000" />
-      <workItem from="1616891886775" duration="999000" />
+      <workItem from="1616891886775" duration="1110000" />
     </task>
     <task id="LOCAL-00001" summary="1.0">
       <created>1614941484830</created>
@@ -270,7 +264,21 @@
       <option name="project" value="LOCAL" />
       <updated>1616892371660</updated>
     </task>
-    <option name="localTasksCounter" value="24" />
+    <task id="LOCAL-00024" summary="FINALE">
+      <created>1616892899256</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1616892899256</updated>
+    </task>
+    <task id="LOCAL-00025" summary="FINALE">
+      <created>1616892950811</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1616892950811</updated>
+    </task>
+    <option name="localTasksCounter" value="26" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
