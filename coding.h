@@ -6,7 +6,7 @@
 #include "key.h"
 
 void code_file(key* chiave, char* outputDir, char* inputFile, char* command);
-char** divide_couples(key* chiave, char* message, int rows);
+char** split_in_couples(key* chiave, char* message, int rows);
 void create_couple(char* message, key* chiave, int *i, char* couple);
 void code_couple(key* chiave, char** couples, char* command);
 void encode_couple(key* chiave, char* couple);

@@ -13,7 +13,7 @@ void code_file(key* chiave, char* outputDir, char* inputFile, char* command) {
     check_file(fout, OUT_FILE_ERROR);
     free_string(outputPath);
     int rows = strlen(message)+1;
-    char** couples = divide_couples(chiave, message, rows);
+    char** couples = split_in_couples(chiave, message, rows);
     code_couple(chiave, couples, command);
     for (int i = 0; couples[i][0] != 0; i++) {
         fprintf(fout, "%s ", couples[i]);
@@ -24,7 +24,7 @@ void code_file(key* chiave, char* outputDir, char* inputFile, char* command) {
     free_matrix(couples, rows);
 }
 
-char** divide_couples(key* chiave, char* message, int rows) {
+char** split_in_couples(key* chiave, char* message, int rows) {
     char** couples = create_matrix(rows, 2);
     int r = 0;
     for (int i = 0; i < strlen(message); i++) {
