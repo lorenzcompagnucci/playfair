@@ -43,24 +43,41 @@ key_data* get_key_data(char* buffer) {
 }
 
 void set_matrix(key* k) {
+    char* positions = (char*) calloc(2, sizeof(char));
+    check_string(positions, POSITIONS_ERROR);
     for (int i = 0; i < strlen(k->kd->chiave); i++) {
-        loop_on_matrix(k, k->kd->chiave[i]);
+        loop_on_matrix(k, positions, k->kd->chiave[i]);
     }
     for (int i = 0; i < strlen(k->kd->alfabeto); i++) {
-        loop_on_matrix(k, k->kd->alfabeto[i]);
+        loop_on_matrix(k, positions, k->kd->alfabeto[i]);
+    }
+    free_string(positions);
+}
+
+int loop_on_matrix(key* k, char* positions, char c) {
+    int count = 0;
+    for (int m = 0; m <= positions[0] && count == 0; m++) {
+        for (int n = 0; n <= positions[1] && count == 0; n++) {
+            if (k->matrice[m][n] == c) {
+                count++;
+            }
+        }
+    }
+    if (count == 0) {
+        k->matrice[positions[0]][positions[1]] = c;
+        encrease_positions(positions);
     }
 }
 
-void loop_on_matrix(key* k, char c) {
-    int counter = 0;
-    for (int m = 0; m < 5 && counter == 0; m++) {
-        for (int n = 0; n < 5 && counter == 0; n++) {
-            if (k->matrice[m][n] == c) {
-                counter++;
-            } else if (k->matrice[m][n] == 0 && counter == 0) {
-                k->matrice[m][n] = c;
-                counter++;
+void encrease_positions(char* positions) {
+    if (!(positions[0] == 4 && positions[1] == 4)) {
+        if (positions[1] == 4) {
+            positions[1] = 0;
+            if (positions[0] != 4) {
+                positions[0] += 1;
             }
+        } else {
+            positions[1] += 1;
         }
     }
 }
@@ -82,20 +99,4 @@ void set_chars(key* k) {
             break;
         }
     }
-}
-
-void free_key(key* k) {
-    free_key_data(k->kd);
-    free_matrix(k->matrice, 5);
-    free(k);
-    k = NULL;
-}
-
-void free_key_data(key_data* kd) {
-    free_string(kd->alfabeto);
-    free_string(kd->sostituto);
-    free_string(kd->speciale);
-    free_string(kd->chiave);
-    free(kd);
-    kd = NULL;
 }

@@ -33,3 +33,19 @@ void check_matrix(char** matrix, char* errmessage) {
         exit(0);
     }
 }
+
+void free_key(key* k) {
+    free_key_data(k->kd);
+    free_matrix(k->matrice, 5);
+    free(k);
+    k = NULL;
+}
+
+void free_key_data(key_data* kd) {
+    free_string(kd->alfabeto);
+    free_string(kd->sostituto);
+    free_string(kd->speciale);
+    free_string(kd->chiave);
+    free(kd);
+    kd = NULL;
+}

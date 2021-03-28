@@ -4,6 +4,7 @@
 #include "keygen.h"
 #include "key.h"
 #include "coding.h"
+#include "mem_utils.h"
 
 void print_commands() {
     printf("playfair (encode/decode) chiave outputDir file1 file2..\n");
@@ -22,6 +23,12 @@ int main(int argc, char *argv[]) {
     }
     if (strcmp(argv[1], "encode") == 0 || strcmp(argv[1], "decode") == 0) {
         key* key = get_key(argv[2]);
+        for (int i = 0; i < 5; ++i) {
+            for (int j = 0; j < 5; ++j) {
+                printf("%c ", key->matrice[i][j]);
+            }
+            printf("\n");
+        }
         for (int i = 4; i < argc; i++) {
             code_file(key, argv[3], argv[i], argv[1]);
         }
