@@ -16,7 +16,7 @@ void code_file(key* chiave, char* outputDir, char* inputFile, char* command) {
     char** couples = split_in_couples(chiave, message, rows);
     code_couple(chiave, couples, command);
     for (int i = 0; couples[i][0] != 0; i++) {
-        fprintf(fout, "%s ", couples[i]);
+        fputs(couples[i], fout);
         fflush(fout);
     }
     fclose(fout);
@@ -25,7 +25,7 @@ void code_file(key* chiave, char* outputDir, char* inputFile, char* command) {
 }
 
 char** split_in_couples(key* chiave, char* message, int rows) {
-    char** couples = create_matrix(rows, 2);
+    char** couples = create_matrix(rows, 3);
     int r = 0;
     for (int i = 0; i < strlen(message); i++) {
         create_couple(message, chiave, &i, couples[r]);
@@ -46,6 +46,7 @@ void create_couple(char* message, key* chiave, int *i, char* couple) {
     } else {
         couple[1] = chiave->speciale;
     }
+    couple[2] = ' ';
 }
 
 void code_couple(key* chiave, char** couples, char* command) {
