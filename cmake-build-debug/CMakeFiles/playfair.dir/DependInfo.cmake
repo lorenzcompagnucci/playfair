@@ -4,14 +4,14 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_C
-  "/home/lorenzo/CLionProjects/playfair/coding.c" "/home/lorenzo/CLionProjects/playfair/cmake-build-debug/CMakeFiles/playfair.dir/coding.c.o"
-  "/home/lorenzo/CLionProjects/playfair/directory.c" "/home/lorenzo/CLionProjects/playfair/cmake-build-debug/CMakeFiles/playfair.dir/directory.c.o"
-  "/home/lorenzo/CLionProjects/playfair/elab_utils.c" "/home/lorenzo/CLionProjects/playfair/cmake-build-debug/CMakeFiles/playfair.dir/elab_utils.c.o"
-  "/home/lorenzo/CLionProjects/playfair/file.c" "/home/lorenzo/CLionProjects/playfair/cmake-build-debug/CMakeFiles/playfair.dir/file.c.o"
-  "/home/lorenzo/CLionProjects/playfair/key.c" "/home/lorenzo/CLionProjects/playfair/cmake-build-debug/CMakeFiles/playfair.dir/key.c.o"
-  "/home/lorenzo/CLionProjects/playfair/keygen.c" "/home/lorenzo/CLionProjects/playfair/cmake-build-debug/CMakeFiles/playfair.dir/keygen.c.o"
-  "/home/lorenzo/CLionProjects/playfair/main.c" "/home/lorenzo/CLionProjects/playfair/cmake-build-debug/CMakeFiles/playfair.dir/main.c.o"
-  "/home/lorenzo/CLionProjects/playfair/mem_utils.c" "/home/lorenzo/CLionProjects/playfair/cmake-build-debug/CMakeFiles/playfair.dir/mem_utils.c.o"
+  "C:/Users/loren/CLionProjects/playfair/coding.c" "C:/Users/loren/CLionProjects/playfair/cmake-build-debug/CMakeFiles/playfair.dir/coding.c.obj"
+  "C:/Users/loren/CLionProjects/playfair/directory.c" "C:/Users/loren/CLionProjects/playfair/cmake-build-debug/CMakeFiles/playfair.dir/directory.c.obj"
+  "C:/Users/loren/CLionProjects/playfair/elab_utils.c" "C:/Users/loren/CLionProjects/playfair/cmake-build-debug/CMakeFiles/playfair.dir/elab_utils.c.obj"
+  "C:/Users/loren/CLionProjects/playfair/file.c" "C:/Users/loren/CLionProjects/playfair/cmake-build-debug/CMakeFiles/playfair.dir/file.c.obj"
+  "C:/Users/loren/CLionProjects/playfair/key.c" "C:/Users/loren/CLionProjects/playfair/cmake-build-debug/CMakeFiles/playfair.dir/key.c.obj"
+  "C:/Users/loren/CLionProjects/playfair/keygen.c" "C:/Users/loren/CLionProjects/playfair/cmake-build-debug/CMakeFiles/playfair.dir/keygen.c.obj"
+  "C:/Users/loren/CLionProjects/playfair/main.c" "C:/Users/loren/CLionProjects/playfair/cmake-build-debug/CMakeFiles/playfair.dir/main.c.obj"
+  "C:/Users/loren/CLionProjects/playfair/mem_utils.c" "C:/Users/loren/CLionProjects/playfair/cmake-build-debug/CMakeFiles/playfair.dir/mem_utils.c.obj"
   )
 set(CMAKE_C_COMPILER_ID "GNU")
 

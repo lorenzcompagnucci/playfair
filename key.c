@@ -46,10 +46,14 @@ void set_matrix(key* k) {
     char* positions = (char*) calloc(2, sizeof(char));
     check_string(positions, POSITIONS_ERROR);
     for (int i = 0; i < strlen(k->kd->chiave); i++) {
-        loop_on_matrix(k, positions, k->kd->chiave[i]);
+        if (!(positions[0] == 4 && positions[1] == 4)) {
+            loop_on_matrix(k, positions, k->kd->chiave[i]);
+        }
     }
     for (int i = 0; i < strlen(k->kd->alfabeto); i++) {
-        loop_on_matrix(k, positions, k->kd->alfabeto[i]);
+        if (!(positions[0] == 4 && positions[1] == 4)) {
+            loop_on_matrix(k, positions, k->kd->alfabeto[i]);
+        }
     }
     free_string(positions);
 }
@@ -70,15 +74,13 @@ int loop_on_matrix(key* k, char* positions, char c) {
 }
 
 void encrease_positions(char* positions) {
-    if (!(positions[0] == 4 && positions[1] == 4)) {
-        if (positions[1] == 4) {
-            positions[1] = 0;
-            if (positions[0] != 4) {
-                positions[0] += 1;
-            }
-        } else {
-            positions[1] += 1;
+    if (positions[1] == 4) {
+        positions[1] = 0;
+        if (positions[0] != 4) {
+            positions[0] += 1;
         }
+    } else {
+        positions[1] += 1;
     }
 }
 
