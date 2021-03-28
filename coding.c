@@ -49,10 +49,12 @@ void create_couple(char* message, key* chiave, int *i, char* couple) {
 }
 
 void code_couple(key* chiave, char** couples, char* command) {
-    for (int i = 0; couples[i][0] != 0; i++) {
-        if (strcmp(command, "encode") == 0) {
+    if (strcmp(command, "encode") == 0) {
+        for (int i = 0; couples[i][0] != 0; i++) {
             encode_couple(chiave, couples[i]);
-        } else {
+        }
+    } else {
+        for (int i = 0; couples[i][0] != 0; i++) {
             decode_couple(chiave, couples[i]);
         }
     }
