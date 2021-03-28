@@ -28,25 +28,27 @@ char** split_in_couples(key* chiave, char* message, int rows) {
     char** couples = create_matrix(rows, 3);
     int r = 0;
     for (int i = 0; i < strlen(message); i++) {
-        create_couple(message, chiave, &i, couples[r]);
+        i += create_couple(message[i], message[i+1], chiave, couples[r]);
+        r++;
     }
     return couples;
 }
 
-void create_couple(char* message, key* chiave, int *i, char* couple) {
-    couple[0] = message[*i];
-    couple[1] = message[*i+1];
-    for (int j = 0; j < strlen(couple); ++j) {
-        if (couple[j] == chiave->mancante) {
-            couple[j] = chiave->sostituto;
+int create_couple(char c1, char c2, key* chiave, char* couple) {
+    couple[0] = c1;
+    couple[1] = c2;
+    couple[2] = ' ';
+    for (int i = 0; i < strlen(couple); i++) {
+        if (couple[i] == chiave->mancante) {
+            couple[i] = chiave->sostituto;
         }
     }
     if (couple[0] != couple[1] && couple[1] != '\0') {
-        *i += 1;
+        return 1;
     } else {
         couple[1] = chiave->speciale;
     }
-    couple[2] = ' ';
+    return 0;
 }
 
 void code_couple(key* chiave, char** couples, char* command) {

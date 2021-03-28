@@ -7,7 +7,7 @@
 
 void code_file(key* chiave, char* outputDir, char* inputFile, char* command);
 char** split_in_couples(key* chiave, char* message, int rows);
-void create_couple(char* message, key* chiave, int *i, char* couple);
+int create_couple(char c1, char c2, key* chiave, char* couple);
 void code_couple(key* chiave, char** couples, char* command);
 void encode_couple(key* chiave, char* couple);
 void decode_couple(key* chiave, char* couple);
