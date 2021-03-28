@@ -12,7 +12,7 @@ void code_file(key* chiave, char* outputDir, char* inputFile, char* command) {
     FILE* fout = fopen(outputPath, "w");
     check_file(fout, OUT_FILE_ERROR);
     free_string(outputPath);
-    int rows = strlen(message)+1;
+    int rows = strlen(message);
     char** couples = split_in_couples(chiave, message, rows);
     code_couple(chiave, couples, command);
     for (int i = 0; couples[i][0] != 0; i++) {
