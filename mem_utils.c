@@ -7,7 +7,7 @@ char** create_matrix(int rows, int columns) {
     char** matrix = (char**) malloc(sizeof(char*) * rows);
     check_matrix(matrix, COUPLES_MATRIX_ERR);
     for (int i = 0; i < rows; i++) {
-        matrix[i] = (char*) calloc(2, sizeof(char));
+        matrix[i] = (char*) calloc(columns, sizeof(char));
         check_string(matrix, ROW_ERR);
     }
     return matrix;
