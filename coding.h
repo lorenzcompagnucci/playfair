@@ -5,8 +5,8 @@
 
 #include "key.h"
 
-void code_file(key* chiave, char* outputDir, char* inputFile, char* command);
-char** split_in_couples(key* chiave, char* message, int rows);
+void code_file(char* command, char* outputDir, char* inputFile, key* chiave);
+char** split_in_couples(key* chiave, char* message);
 int create_couple(char c1, char c2, key* chiave, char* couple);
 void code_couple(key* chiave, char** couples, char* command);
 void encode_couple(key* chiave, char* couple);

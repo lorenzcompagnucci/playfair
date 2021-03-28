@@ -24,7 +24,7 @@ int main(int argc, char *argv[]) {
     if (strcmp(argv[1], "encode") == 0 || strcmp(argv[1], "decode") == 0) {
         key* key = get_key(argv[2]);
         for (int i = 4; i < argc; i++) {
-            code_file(key, argv[3], argv[i], argv[1]);
+            code_file(argv[1], argv[3], argv[i], key);
         }
         free_key(key);
         return 1;

@@ -6,28 +6,28 @@
 #include "directory.h"
 #include "mem_utils.h"
 
-void code_file(key* chiave, char* outputDir, char* inputFile, char* command) {
+void code_file(char* command, char* outputDir, char* inputFile, key* chiave) {
     char* message = read_file(inputFile);
     char* outputPath = get_directory(outputDir, inputFile, command);
     FILE* fout = fopen(outputPath, "w");
     check_file(fout, OUT_FILE_ERROR);
     free_string(outputPath);
-    int rows = strlen(message);
-    char** couples = split_in_couples(chiave, message, rows);
+    char** couples = split_in_couples(chiave, message);
     code_couple(chiave, couples, command);
     for (int i = 0; couples[i][0] != 0; i++) {
         fputs(couples[i], fout);
         fflush(fout);
     }
     fclose(fout);
+    free_matrix(couples, strlen(message));
     free_string(message);
-    free_matrix(couples, rows);
 }
 
-char** split_in_couples(key* chiave, char* message, int rows) {
+char** split_in_couples(key* chiave, char* message) {
+    int rows = strlen(message);
     char** couples = create_matrix(rows, 3);
     int r = 0;
-    for (int i = 0; i < strlen(message); i++) {
+    for (int i = 0; i < rows; i++) {
         i += create_couple(message[i], message[i+1], chiave, couples[r]);
         r++;
     }
