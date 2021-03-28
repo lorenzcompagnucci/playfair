@@ -1,8 +1,12 @@
 #ifndef PLAYFAIR_MEM_UTILS_H
 #define PLAYFAIR_MEM_UTILS_H
 
+#define COUPLES_MATRIX_ERR "ERROR WHILE ALLOCATING MEMORY FOR A MATRIX"
+#define ROW_ERR "ERROR WHILE ALLOCATING MEMORY FOR A ROW"
+
 #include "key.h"
 
+char** create_matrix(int rows, int columns);
 void free_string(char* string);
 void check_string(char* string, char* errmessage);
 void free_matrix(char** matrix, int rows);

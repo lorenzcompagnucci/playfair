@@ -13,18 +13,29 @@ void code_file(key* chiave, char* outputDir, char* inputFile, char* command) {
     FILE* fout = fopen(outputPath, "w");
     check_file(fout, OUT_FILE_ERROR);
     free_string(outputPath);
-    for (int i = 0; i < strlen(message); i++) {
-        char* couple = create_couple(message, chiave, &i);
+    int rows = (strlen(message)*2)+1;
+    char** couples = divide_couples(chiave, message, rows);
+    for (int i = 0; couples[i][0] != 0; i++) {
         if (strcmp(command, "encode") == 0) {
-            encode_couple(chiave, couple);
+            encode_couple(chiave, couples[i]);
         } else {
-            decode_couple(chiave, couple);
+            decode_couple(chiave, couples[i]);
         }
-        fprintf(fout, "%s ", couple);
+        fprintf(fout, "%s ", couples[i]);
         fflush(fout);
     }
     fclose(fout);
     free_string(message);
+    free_matrix(couples, rows);
+}
+
+char** divide_couples(key* chiave, char* message, int rows) {
+    char** couples = create_matrix(rows, 2);
+    int r = 0;
+    for (int i = 0; i < strlen(message); i++) {
+        create_couple(message, chiave, &i, couples[r]);
+    }
+    return couples;
 }
 
 void encode_couple(key* chiave, char* couple) {

@@ -7,12 +7,7 @@
 
 key* get_key(char* keyPath) {
     key* k = malloc(sizeof(key));
-    k->matrice = (char**) malloc(sizeof(char*) * 5);
-    check_matrix(k->matrice, MATRIX_ERROR);
-    for (int i = 0; i < 5; i++) {
-        k->matrice[i] = (char*) calloc(5, sizeof(char));
-        check_string(k->matrice[i], ROW_ERROR);
-    }
+    k->matrice = create_matrix(5, 5);
     char* buffer = read_file(keyPath);
     k->kd = get_key_data(buffer);
     free_string(buffer);

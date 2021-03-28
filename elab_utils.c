@@ -2,8 +2,7 @@
 
 #include "elab_utils.h"
 
-char* create_couple(char* message, key* chiave, int *i) {
-    static char couple[3];
+void create_couple(char* message, key* chiave, int *i, char* couple) {
     couple[0] = message[*i];
     couple[1] = message[*i+1];
     for (int j = 0; j < strlen(couple); ++j) {
@@ -16,7 +15,6 @@ char* create_couple(char* message, key* chiave, int *i) {
     } else {
         couple[1] = chiave->speciale;
     }
-    return couple;
 }
 
 void find_positions(key* chiave, char l, int* riga, int* colonna) {
