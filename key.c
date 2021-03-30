@@ -49,6 +49,8 @@ void insert_data_on_matrix(char** matrix, char* positions, char* data) {
     for (int i = 0; i < strlen(data); i++) {
         if (!(positions[0] == 4 && positions[1] == 4)) {
             loop_on_matrix(matrix, positions, data[i]);
+        } else {
+            break;
         }
     }
 }
