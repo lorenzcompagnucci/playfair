@@ -40,30 +40,30 @@ key_data* get_key_data(char* buffer) {
 void set_matrix(key* k) {
     char* positions = (char*) calloc(2, sizeof(char));
     check_string(positions, POSITIONS_ERROR);
-    for (int i = 0; i < strlen(k->kd->chiave); i++) {
-        if (!(positions[0] == 4 && positions[1] == 4)) {
-            loop_on_matrix(k, positions, k->kd->chiave[i]);
-        }
-    }
-    for (int i = 0; i < strlen(k->kd->alfabeto); i++) {
-        if (!(positions[0] == 4 && positions[1] == 4)) {
-            loop_on_matrix(k, positions, k->kd->alfabeto[i]);
-        }
-    }
+    insert_data_on_matrix(k->matrice, positions, k->kd->chiave);
+    insert_data_on_matrix(k->matrice, positions, k->kd->alfabeto);
     free_string(positions);
 }
 
-int loop_on_matrix(key* k, char* positions, char c) {
+void insert_data_on_matrix(char** matrix, char* positions, char* data) {
+    for (int i = 0; i < strlen(data); i++) {
+        if (!(positions[0] == 4 && positions[1] == 4)) {
+            loop_on_matrix(matrix, positions, data[i]);
+        }
+    }
+}
+
+void loop_on_matrix(char** matrix, char* positions, char c) {
     int count = 0;
     for (int m = 0; m <= positions[0] && count == 0; m++) {
         for (int n = 0; n <= positions[1] && count == 0; n++) {
-            if (k->matrice[m][n] == c) {
+            if (matrix[m][n] == c) {
                 count++;
             }
         }
     }
     if (count == 0) {
-        k->matrice[positions[0]][positions[1]] = c;
+        matrix[positions[0]][positions[1]] = c;
         encrease_positions(positions);
     }
 }
@@ -71,9 +71,7 @@ int loop_on_matrix(key* k, char* positions, char c) {
 void encrease_positions(char* positions) {
     if (positions[1] == 4) {
         positions[1] = 0;
-        if (positions[0] != 4) {
-            positions[0] += 1;
-        }
+        positions[0] += 1;
     } else {
         positions[1] += 1;
     }

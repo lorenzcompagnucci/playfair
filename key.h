@@ -24,7 +24,8 @@ typedef struct key {
 key* get_key(char* keyPath);
 key_data* get_key_data(char* buffer);
 void set_matrix(key* k);
-int loop_on_matrix(key* k, char* positions, char c);
+void insert_data_on_matrix(char** matrix, char* position, char* data);
+void loop_on_matrix(char** matrix, char* positions, char c);
 void encrease_positions(char* positions);
 void set_chars(key* k);
 

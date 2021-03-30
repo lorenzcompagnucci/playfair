@@ -12,8 +12,7 @@ void code_file(char* command, char* outputDir, char* inputFile, key* chiave) {
     FILE* fout = fopen(outputPath, "w");
     check_file(fout, OUT_FILE_ERROR);
     free_string(outputPath);
-    char** couples = split_in_couples(chiave, message);
-    code_couple(chiave, couples, command);
+    char** couples = split_in_couples(chiave, message, command);
     for (int i = 0; couples[i][0] != 0; i++) {
         fputs(couples[i], fout);
         fflush(fout);
@@ -23,12 +22,17 @@ void code_file(char* command, char* outputDir, char* inputFile, key* chiave) {
     free_string(message);
 }
 
-char** split_in_couples(key* chiave, char* message) {
-    int rows = strlen(message);
-    char** couples = create_matrix(rows, 3);
-    int r = 0;
-    for (int i = 0; i < rows; i++) {
+char** split_in_couples(key* chiave, char* message, char* command) {
+    int value = strlen(message);
+    char** couples = create_matrix(value, 3);
+    int r = 0, i = 0;
+    while (i < value) {
         i += create_couple(message[i], message[i+1], chiave, couples[r]);
+        if (strcmp(command, "encode") == 0) {
+            encode_couple(chiave, couples[r]);
+        } else {
+            decode_couple(chiave, couples[r]);
+        }
         r++;
     }
     return couples;
@@ -44,22 +48,10 @@ int create_couple(char c1, char c2, key* chiave, char* couple) {
         }
     }
     if (couple[0] != couple[1] && couple[1] != '\0') {
-        return 1;
+        return 2;
     } else {
         couple[1] = chiave->speciale;
-    }
-    return 0;
-}
-
-void code_couple(key* chiave, char** couples, char* command) {
-    if (strcmp(command, "encode") == 0) {
-        for (int i = 0; couples[i][0] != 0; i++) {
-            encode_couple(chiave, couples[i]);
-        }
-    } else {
-        for (int i = 0; couples[i][0] != 0; i++) {
-            decode_couple(chiave, couples[i]);
-        }
+        return 1;
     }
 }
 
