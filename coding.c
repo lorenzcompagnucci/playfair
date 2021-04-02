@@ -40,11 +40,11 @@ int create_couple(char* couple, char* message, int i, key* chiave) {
             couple[j] = chiave->sostituto;
         }
     }
-    if (couple[0] == couple[1] || couple[1] != '\0') {
+    if (couple[0] != couple[1] && couple[1] != '\0') {
+        return 2;
+    } else {
         couple[1] = chiave->speciale;
         return 1;
-    } else {
-        return 2;
     }
 }
 

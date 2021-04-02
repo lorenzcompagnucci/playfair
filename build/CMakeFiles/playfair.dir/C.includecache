@@ -9,8 +9,6 @@
 /home/lorenzo/CLionProjects/playfair/coding.c
 stdio.h
 -
-stdlib.h
--
 string.h
 -
 coding.h
