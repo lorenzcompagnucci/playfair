@@ -21,6 +21,7 @@ typedef struct key {
 
 key* get_key(char* keyPath);
 key_data* get_key_data(char* buffer);
+void set_key_data(char* token, char* data_slot);
 void set_matrix(key* k);
 void insert_data_on_matrix(char** matrix, char c, char* positions);
 void encrease_positions(char* positions);

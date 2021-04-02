@@ -22,19 +22,17 @@ key_data* get_key_data(char* buffer) {
     kd->alfabeto = (char*) malloc(sizeof(char) * (strlen(token)+1));
     check_string(kd->alfabeto, KEY_DATA_ERROR);
     strcpy(kd->alfabeto, token);
-    token = strtok(NULL, "\r\n");
-    kd->sostituto = (char*) malloc(sizeof(char) * (strlen(token)+1));
-    check_string(kd->sostituto, KEY_DATA_ERROR);
-    strcpy(kd->sostituto, token);
-    token = strtok(NULL, "\r\n");
-    kd->speciale = (char*) malloc(sizeof(char) * (strlen(token)+1));
-    check_string(kd->speciale, KEY_DATA_ERROR);
-    strcpy(kd->speciale, token);
-    token = strtok(NULL, "\r\n");
-    kd->chiave = (char*) malloc(sizeof(char) * (strlen(token)+1));
-    check_string(kd->chiave, KEY_DATA_ERROR);
-    strcpy(kd->chiave, token);
+    set_key_data(token, kd->sostituto);
+    set_key_data(token, kd->speciale);
+    set_key_data(token, kd->chiave);
     return kd;
+}
+
+void set_key_data(char* token, char* data_slot) {
+    token = strtok(NULL, "\r\n");
+    data_slot = (char*) malloc(sizeof(char) * (strlen(token)+1));
+    check_string(data_slot, KEY_DATA_ERROR);
+    strcpy(data_slot, token);
 }
 
 void set_matrix(key* k) {
