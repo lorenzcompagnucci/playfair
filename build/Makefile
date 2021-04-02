@@ -177,33 +177,6 @@ directory.c.s:
 	$(MAKE) -f CMakeFiles/playfair.dir/build.make CMakeFiles/playfair.dir/directory.c.s
 .PHONY : directory.c.s
 
-elab_utils.o: elab_utils.c.o
-
-.PHONY : elab_utils.o
-
-# target to build an object file
-elab_utils.c.o:
-	$(MAKE) -f CMakeFiles/playfair.dir/build.make CMakeFiles/playfair.dir/elab_utils.c.o
-.PHONY : elab_utils.c.o
-
-elab_utils.i: elab_utils.c.i
-
-.PHONY : elab_utils.i
-
-# target to preprocess a source file
-elab_utils.c.i:
-	$(MAKE) -f CMakeFiles/playfair.dir/build.make CMakeFiles/playfair.dir/elab_utils.c.i
-.PHONY : elab_utils.c.i
-
-elab_utils.s: elab_utils.c.s
-
-.PHONY : elab_utils.s
-
-# target to generate assembly for a file
-elab_utils.c.s:
-	$(MAKE) -f CMakeFiles/playfair.dir/build.make CMakeFiles/playfair.dir/elab_utils.c.s
-.PHONY : elab_utils.c.s
-
 file.o: file.c.o
 
 .PHONY : file.o
@@ -354,9 +327,6 @@ help:
 	@echo "... directory.o"
 	@echo "... directory.i"
 	@echo "... directory.s"
-	@echo "... elab_utils.o"
-	@echo "... elab_utils.i"
-	@echo "... elab_utils.s"
 	@echo "... file.o"
 	@echo "... file.i"
 	@echo "... file.s"

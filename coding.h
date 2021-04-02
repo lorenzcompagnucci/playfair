@@ -1,13 +1,13 @@
 #ifndef PLAYFAIR_CODING_H
 #define PLAYFAIR_CODING_H
 
-#define OUT_FILE_ERROR "ERROR WHILE OPENING THE OUTPUT FILE"
+#define CODED_FILE_ERROR "ERROR WHILE OPENING THE OUTPUT FILE"
 
 #include "key.h"
 
 void code_file(char* command, char* outputDir, char* inputFile, key* chiave);
-char** split_in_couples(key* chiave, char* message, char* command);
-int create_couple(char c1, char c2, key* chiave, char* couple);
+void print_couples(key* chiave, char* message, char* command, FILE* fout);
+char* create_couple(char* message, int i, int* p, key* chiave);
 void encode_couple(key* chiave, char* couple);
 void decode_couple(key* chiave, char* couple);
 void find_positions(key* chiave, char l, int* riga, int* colonna);

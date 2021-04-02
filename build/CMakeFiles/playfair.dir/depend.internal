@@ -5,7 +5,6 @@ CMakeFiles/playfair.dir/coding.c.o
  /home/lorenzo/CLionProjects/playfair/coding.c
  /home/lorenzo/CLionProjects/playfair/coding.h
  /home/lorenzo/CLionProjects/playfair/directory.h
- /home/lorenzo/CLionProjects/playfair/elab_utils.h
  /home/lorenzo/CLionProjects/playfair/file.h
  /home/lorenzo/CLionProjects/playfair/key.h
  /home/lorenzo/CLionProjects/playfair/mem_utils.h
@@ -14,10 +13,6 @@ CMakeFiles/playfair.dir/directory.c.o
  /home/lorenzo/CLionProjects/playfair/directory.h
  /home/lorenzo/CLionProjects/playfair/key.h
  /home/lorenzo/CLionProjects/playfair/mem_utils.h
-CMakeFiles/playfair.dir/elab_utils.c.o
- /home/lorenzo/CLionProjects/playfair/elab_utils.c
- /home/lorenzo/CLionProjects/playfair/elab_utils.h
- /home/lorenzo/CLionProjects/playfair/key.h
 CMakeFiles/playfair.dir/file.c.o
  /home/lorenzo/CLionProjects/playfair/file.c
  /home/lorenzo/CLionProjects/playfair/file.h

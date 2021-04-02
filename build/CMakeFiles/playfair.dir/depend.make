@@ -4,7 +4,6 @@
 CMakeFiles/playfair.dir/coding.c.o: ../coding.c
 CMakeFiles/playfair.dir/coding.c.o: ../coding.h
 CMakeFiles/playfair.dir/coding.c.o: ../directory.h
-CMakeFiles/playfair.dir/coding.c.o: ../elab_utils.h
 CMakeFiles/playfair.dir/coding.c.o: ../file.h
 CMakeFiles/playfair.dir/coding.c.o: ../key.h
 CMakeFiles/playfair.dir/coding.c.o: ../mem_utils.h
@@ -13,10 +12,6 @@ CMakeFiles/playfair.dir/directory.c.o: ../directory.c
 CMakeFiles/playfair.dir/directory.c.o: ../directory.h
 CMakeFiles/playfair.dir/directory.c.o: ../key.h
 CMakeFiles/playfair.dir/directory.c.o: ../mem_utils.h
-
-CMakeFiles/playfair.dir/elab_utils.c.o: ../elab_utils.c
-CMakeFiles/playfair.dir/elab_utils.c.o: ../elab_utils.h
-CMakeFiles/playfair.dir/elab_utils.c.o: ../key.h
 
 CMakeFiles/playfair.dir/file.c.o: ../file.c
 CMakeFiles/playfair.dir/file.c.o: ../file.h

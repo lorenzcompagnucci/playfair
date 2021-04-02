@@ -6,7 +6,7 @@
 #include "file.h"
 
 key* get_key(char* keyPath) {
-    key* k = malloc(sizeof(key));
+    key* k = (key*) malloc(sizeof(key));
     k->matrice = create_matrix(5, 5);
     char* buffer = read_file(keyPath);
     k->kd = get_key_data(buffer);
@@ -38,44 +38,23 @@ key_data* get_key_data(char* buffer) {
 }
 
 void set_matrix(key* k) {
-    char* positions = (char*) calloc(2, sizeof(char));
-    check_string(positions, POSITIONS_ERROR);
-    insert_data_on_matrix(k->matrice, positions, k->kd->chiave);
-    insert_data_on_matrix(k->matrice, positions, k->kd->alfabeto);
-    free_string(positions);
+    insert_data_on_matrix(k->matrice, k->kd->chiave);
+    insert_data_on_matrix(k->matrice, k->kd->alfabeto);
 }
 
-void insert_data_on_matrix(char** matrix, char* positions, char* data) {
-    for (int i = 0; i < strlen(data); i++) {
-        if (!(positions[0] == 4 && positions[1] == 4)) {
-            loop_on_matrix(matrix, positions, data[i]);
-        } else {
-            break;
-        }
-    }
-}
-
-void loop_on_matrix(char** matrix, char* positions, char c) {
-    int count = 0;
-    for (int m = 0; m <= positions[0] && count == 0; m++) {
-        for (int n = 0; n <= positions[1] && count == 0; n++) {
-            if (matrix[m][n] == c) {
-                count++;
+void insert_data_on_matrix(char** matrix, char* data) {
+    for (int p = 0; p < strlen(data); p++) {
+        int count = 0;
+        for (int i = 0; i < 5 && count == 0; i++) {
+            for (int j = 0; j < 5 && count == 0; j++) {
+                if (matrix[i][j] == data[p]) {
+                    count++;
+                } else if (matrix[i][j] == 0 && count == 0) {
+                    matrix[i][j] = data[p];
+                    count++;
+                }
             }
         }
-    }
-    if (count == 0) {
-        matrix[positions[0]][positions[1]] = c;
-        encrease_positions(positions);
-    }
-}
-
-void encrease_positions(char* positions) {
-    if (positions[1] == 4) {
-        positions[1] = 0;
-        positions[0] += 1;
-    } else {
-        positions[1] += 1;
     }
 }
 

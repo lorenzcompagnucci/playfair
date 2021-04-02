@@ -8,7 +8,7 @@ char** create_matrix(int rows, int columns) {
     check_matrix(matrix, MATRIX_ERR);
     for (int i = 0; i < rows; i++) {
         matrix[i] = (char*) calloc(columns, sizeof(char));
-        check_string(matrix, MATRIX_ROW_ERR);
+        check_string(matrix[i], MATRIX_ROW_ERR);
     }
     return matrix;
 }

@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <stdlib.h>
 #include <string.h>
 
 #include "coding.h"
@@ -10,49 +11,43 @@ void code_file(char* command, char* outputDir, char* inputFile, key* chiave) {
     char* message = read_file(inputFile);
     char* outputPath = get_directory(outputDir, inputFile, command);
     FILE* fout = fopen(outputPath, "w");
-    check_file(fout, OUT_FILE_ERROR);
+    check_file(fout, CODED_FILE_ERROR);
     free_string(outputPath);
-    char** couples = split_in_couples(chiave, message, command);
-    for (int i = 0; couples[i][0] != 0; i++) {
-        fputs(couples[i], fout);
-        fflush(fout);
-    }
+    print_couples(chiave, message, command, fout);
     fclose(fout);
-    free_matrix(couples, strlen(message));
     free_string(message);
 }
 
-char** split_in_couples(key* chiave, char* message, char* command) {
-    int value = strlen(message);
-    char** couples = create_matrix(value, 3);
-    int r = 0, i = 0;
-    while (i < value) {
-        i += create_couple(message[i], message[i+1], chiave, couples[r]);
+void print_couples(key* chiave, char* message, char* command, FILE* fout) {
+    int i = 0;
+    while (i < strlen(message)) {
+        char* couple = create_couple(message, i, &i, chiave);
         if (strcmp(command, "encode") == 0) {
-            encode_couple(chiave, couples[r]);
+            encode_couple(chiave, couple);
         } else {
-            decode_couple(chiave, couples[r]);
+            decode_couple(chiave, couple);
         }
-        r++;
+        fprintf(fout, "%s ", couple);
+        fflush(fout);
     }
-    return couples;
 }
 
-int create_couple(char c1, char c2, key* chiave, char* couple) {
-    couple[0] = c1;
-    couple[1] = c2;
-    couple[2] = ' ';
-    for (int i = 0; i < strlen(couple); i++) {
-        if (couple[i] == chiave->mancante) {
-            couple[i] = chiave->sostituto;
+char* create_couple(char* message, int i, int* p, key* chiave) {
+    static char couple[3];
+    couple[0] = message[i];
+    couple[1] = message[i+1];
+    for (int j = 0; j < strlen(couple); j++) {
+        if (couple[j] == chiave->mancante) {
+            couple[j] = chiave->sostituto;
         }
     }
     if (couple[0] != couple[1] && couple[1] != '\0') {
-        return 2;
+        *p += 2;
     } else {
         couple[1] = chiave->speciale;
-        return 1;
+        *p += 1;
     }
+    return couple;
 }
 
 void encode_couple(key* chiave, char* couple) {
