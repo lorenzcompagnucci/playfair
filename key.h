@@ -2,7 +2,6 @@
 #define PLAYFAIR_KEY_H
 
 #define KEY_DATA_ERROR "ERROR WHILE ALLOCATING A COMPONENT OF key_data"
-#define POSITIONS_ERROR "ERROR WHILE ALLOCATING MEMORY FOR THE POSITIONS ARRAY"
 
 typedef struct key_data {
     char* alfabeto;
