@@ -38,23 +38,42 @@ key_data* get_key_data(char* buffer) {
 }
 
 void set_matrix(key* k) {
-    insert_data_on_matrix(k->matrice, k->kd->chiave);
-    insert_data_on_matrix(k->matrice, k->kd->alfabeto);
+    char* positions = (char*) calloc(2, sizeof(char));
+    check_string(positions, POSITIONS_ERROR);
+    for (int i = 0; i < strlen(k->kd->chiave); i++) {
+        if (positions[0] <= 4) {
+            insert_data_on_matrix(k->matrice, k->kd->chiave[i], positions);
+        }
+    }
+    for (int i = 0; i < strlen(k->kd->alfabeto); i++) {
+        if (positions[0] <= 4) {
+            insert_data_on_matrix(k->matrice, k->kd->alfabeto[i], positions);
+        }
+    }
+    free_string(positions);
 }
 
-void insert_data_on_matrix(char** matrix, char* data) {
-    for (int p = 0; p < strlen(data); p++) {
-        int count = 0;
-        for (int i = 0; i < 5 && count == 0; i++) {
-            for (int j = 0; j < 5 && count == 0; j++) {
-                if (matrix[i][j] == data[p]) {
-                    count++;
-                } else if (matrix[i][j] == 0 && count == 0) {
-                    matrix[i][j] = data[p];
-                    count++;
-                }
+void insert_data_on_matrix(char** matrix, char c, char* positions) {
+    int count = 0;
+    for (int i = 0; i <= positions[0] && count == 0; i++) {
+        for (int j = 0; j <= positions[1] && count == 0; j++) {
+            if (matrix[i][j] == c) {
+                count++;
             }
         }
+    }
+    if (count == 0) {
+        matrix[positions[0]][positions[1]] = c;
+        encrease_positions(positions);
+    }
+}
+
+void encrease_positions(char* positions) {
+    if (positions[1] == 4) {
+        positions[1] = 0;
+        positions[0] += 1;
+    } else {
+        positions[1] += 1;
     }
 }
 
