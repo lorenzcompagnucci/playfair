@@ -21,7 +21,8 @@ void code_file(char* command, char* outputDir, char* inputFile, key* chiave) {
 void print_couples(key* chiave, char* message, char* command, FILE* fout) {
     int i = 0;
     while (i < strlen(message)) {
-        char* couple = create_couple(message, i, &i, chiave);
+        char couple[3];
+        i += create_couple(couple, message, i, chiave);
         if (strcmp(command, "encode") == 0) {
             encode_couple(chiave, couple);
         } else {
@@ -32,8 +33,7 @@ void print_couples(key* chiave, char* message, char* command, FILE* fout) {
     }
 }
 
-char* create_couple(char* message, int i, int* p, key* chiave) {
-    static char couple[3];
+int create_couple(char* couple, char* message, int i, key* chiave) {
     couple[0] = message[i];
     couple[1] = message[i+1];
     for (int j = 0; j < strlen(couple); j++) {
@@ -41,13 +41,12 @@ char* create_couple(char* message, int i, int* p, key* chiave) {
             couple[j] = chiave->sostituto;
         }
     }
-    if (couple[0] != couple[1] && couple[1] != '\0') {
-        *p += 2;
-    } else {
+    if (couple[0] == couple[1] || couple[1] != '\0') {
         couple[1] = chiave->speciale;
-        *p += 1;
+        return 1;
+    } else {
+        return 2;
     }
-    return couple;
 }
 
 void encode_couple(key* chiave, char* couple) {
