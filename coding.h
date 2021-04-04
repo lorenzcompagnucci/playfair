@@ -5,11 +5,11 @@
 
 #include "key.h"
 
-void code_file(char* command, char* outputDir, char* inputFile, key* chiave);
-void print_couples(key* chiave, char* message, char* command, FILE* fout);
-int create_couple(char* couple, char* message, int i, key* chiave);
-void encode_couple(key* chiave, char* couple);
-void decode_couple(key* chiave, char* couple);
-void find_positions(key* chiave, char l, int* riga, int* colonna);
+void code_file(char* command, char* output_dir, char* input_file, key* key);
+void print_couples(key* key, char* message, char* command, FILE* fout);
+int create_couple(char* couple, char* message, int i, key* key);
+void encode_couple(key* key, char* couple);
+void decode_couple(key* key, char* couple);
+void find_positions(key* key, char l, int* row, int* column);
 
 #endif //PLAYFAIR_CODING_H

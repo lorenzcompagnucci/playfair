@@ -8,23 +8,23 @@
 #include "directory.h"
 #include "mem_utils.h"
 
-char* get_directory(char* outputDir, char* inputFile, char* command) {
+char* get_directory(char* output_dir, char* input_file, char* command) {
     if (strcmp(command, "encode") == 0) {
-        return create_directory(outputDir, inputFile, ".pf");
+        return create_directory(output_dir, input_file, ".pf");
     } else {
-        return create_directory(outputDir, inputFile, ".dec");
+        return create_directory(output_dir, input_file, ".dec");
     }
 }
 
-char* create_directory(char* outputDir, char* inputFile, char* format) {
-    char *outputFile = (char*) malloc((strlen(basename(inputFile)) + strlen(format) + 1) * sizeof(char));
+char* create_directory(char* output_dir, char* input_file, char* format) {
+    char *outputFile = (char*) malloc((strlen(basename(input_file)) + strlen(format) + 1) * sizeof(char));
     check_string(outputFile, FILE_O);
-    strcpy(outputFile, basename(inputFile));
+    strcpy(outputFile, basename(input_file));
     modify_extension(outputFile, format);
-    check_directory(outputDir);
-    char* outputPath = (char*) malloc((strlen(outputDir) + 1) * sizeof(char) + sizeof(outputFile));
+    check_directory(output_dir);
+    char* outputPath = (char*) malloc((strlen(output_dir) + 1) * sizeof(char) + sizeof(outputFile));
     check_string(outputPath, DIR_O);
-    strcpy(outputPath, outputDir);
+    strcpy(outputPath, output_dir);
     strcat(outputPath, "/");
     strcat(outputPath, outputFile);
     free_string(outputFile);

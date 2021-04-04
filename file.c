@@ -5,8 +5,8 @@
 #include "file.h"
 #include "mem_utils.h"
 
-char* read_file(char* inputFile) {
-    FILE* fin = fopen(inputFile, "r");
+char* read_file(char* input_file) {
+    FILE* fin = fopen(input_file, "r");
     check_file(fin, FIN_ERROR);
     char* buffer = reader(fin);
     fclose(fin);

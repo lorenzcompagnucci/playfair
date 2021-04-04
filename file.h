@@ -6,7 +6,7 @@
 #define FIN_ERROR "INPUT FILE ERROR"
 #define INP_BUFF_ERROR "INPUT FILE BUFFER ERROR"
 
-char* read_file(char* inputFile);
+char* read_file(char* input_file);
 char* reader(FILE* fin);
 long int file_size(FILE* fp);
 void check_file(FILE* fp, char* errmessage);
