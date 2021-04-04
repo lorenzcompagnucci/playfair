@@ -11,9 +11,7 @@ key* get_key(char* keyPath) {
     char* buffer = read_file(keyPath);
     k->kd = get_key_data(buffer);
     free_string(buffer);
-    insert_data_on_matrix(k->matrice, k->kd->chiave);
-    insert_data_on_matrix(k->matrice, k->kd->alfabeto);
-    set_chars(k);
+    set_key(k);
     return k;
 }
 
@@ -38,6 +36,14 @@ key_data* get_key_data(char* buffer) {
     return kd;
 }
 
+void set_key(key* key) {
+    insert_data_on_matrix(key->matrice, key->kd->chiave);
+    insert_data_on_matrix(key->matrice, key->kd->alfabeto);
+    key->sostituto = key->kd->sostituto[0];
+    key->speciale = key->kd->speciale[0];
+    set_missing_char(key);
+}
+
 void insert_data_on_matrix(char** matrix, char* data) {
     for (int p = 0; p < strlen(data); p++) {
         int count = 0;
@@ -54,16 +60,14 @@ void insert_data_on_matrix(char** matrix, char* data) {
     }
 }
 
-void set_chars(key* k) {
-    k->sostituto = k->kd->sostituto[0];
-    k->speciale = k->kd->speciale[0];
+void set_missing_char(key* k) {
     for (char x = 'A'; x <= 'Z'; x++) {
         k->mancante = x;
         int counter = 0;
         for (int i = 0; i < 5 && counter == 0; i++) {
             for (int j = 0; j < 5 && counter == 0; j++) {
                 if (x == k->matrice[i][j]) {
-                    counter = 1;
+                    counter++;
                 }
             }
         }
