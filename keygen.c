@@ -16,7 +16,7 @@ void create_key(char* path, char* alphabet, char* replace, char* special, char* 
     check_key(keyword);
     char* file = generate_key_path(path);
     FILE* fp = fopen(file, "w");
-    check_file(fp, OUT_FILE_ERROR);
+    check_file(fp, FOUT_ERROR);
     free_string(file);
     fprintf(fp, "%s\r\n%c\r\n%c\r\n%s\r\n", alphabet, replace_char, special_char, keyword);
     fflush(fp);

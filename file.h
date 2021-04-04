@@ -3,7 +3,7 @@
 
 #include <stdio.h>
 
-#define INP_FILE_ERROR "INPUT FILE ERROR"
+#define FIN_ERROR "INPUT FILE ERROR"
 #define INP_BUFF_ERROR "INPUT FILE BUFFER ERROR"
 
 char* read_file(char* inputFile);

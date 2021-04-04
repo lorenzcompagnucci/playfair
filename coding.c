@@ -10,7 +10,7 @@ void code_file(char* command, char* outputDir, char* inputFile, key* chiave) {
     char* message = read_file(inputFile);
     char* outputPath = get_directory(outputDir, inputFile, command);
     FILE* fout = fopen(outputPath, "w");
-    check_file(fout, CODED_FILE_ERROR);
+    check_file(fout, FOUT_ERROR);
     free_string(outputPath);
     print_couples(chiave, message, command, fout);
     fclose(fout);

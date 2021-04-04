@@ -7,7 +7,7 @@
 
 char* read_file(char* inputFile) {
     FILE* fin = fopen(inputFile, "r");
-    check_file(fin, INP_FILE_ERROR);
+    check_file(fin, FIN_ERROR);
     char* buffer = reader(fin);
     fclose(fin);
     return buffer;
