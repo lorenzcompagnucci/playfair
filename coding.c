@@ -117,7 +117,7 @@ void decode_couple(key* key, char* couple) {
     }
 }
 
-void find_positions(key* key, char* couple, int** positions) {
+void find_positions(key* key, char* couple, int positions[2][2]) {
     positions[0][0] = -1;
     positions[1][0] = -1;
     for (int i = 0; i < 5 && (positions[0][0] == -1 || positions[1][0] == -1); i++) {
