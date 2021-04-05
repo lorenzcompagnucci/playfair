@@ -32,7 +32,7 @@ void print_couples(key* key, char* message, char* command, FILE* fout) {
     }
 }
 
-int create_couple(char* couple, char* message, int i, key* key) {
+int create_couple(char* couple, const char* message, int i, key* key) {
     couple[0] = message[i];
     couple[1] = message[i+1];
     for (int j = 0; j < strlen(couple); j++) {
@@ -117,7 +117,7 @@ void decode_couple(key* key, char* couple) {
     }
 }
 
-void find_positions(key* key, char* couple, int positions[2][2]) {
+void find_positions(key* key, const char* couple, int positions[2][2]) {
     positions[0][0] = -1;
     positions[1][0] = -1;
     for (int i = 0; i < 5 && (positions[0][0] == -1 || positions[1][0] == -1); i++) {
