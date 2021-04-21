@@ -24,7 +24,7 @@ void elaborate_file(char* command, char* output_dir, char* input_file, key* key)
 
 char* fix_missing_chars(char* message, key* key) {
     char* new_message = message;
-    for (int i = 0; i < strlen(new_message); ++i) {
+    for (int i = 0; i < strlen(new_message); i++) {
         if (new_message[i] == key->missing) {
             new_message[i] = key->replacement;
         }
@@ -38,9 +38,8 @@ int create_couple(const char* message, char* couple, int i, key* key) {
     if (couple[0] == couple[1] || couple[1] == '\0') {
         couple[1] = key->special;
         return 1;
-    } else {
-        return 2;
     }
+    return 2;
 }
 
 void find_positions(key* key, const char* couple, int positions[2][2]) {

@@ -17,13 +17,11 @@ char* get_directory(char* output_dir, char* input_file, char* command) {
 }
 
 char* create_directory(char* output_dir, char* input_file, char* format) {
-    char *outputFile = (char*) malloc((strlen(basename(input_file)) + strlen(format) + 1) * sizeof(char));
-    check_string(outputFile, FILE_O);
+    char *outputFile = create_string(strlen(basename(input_file)) + strlen(format) + 1, FILE_O);
     strcpy(outputFile, basename(input_file));
     modify_extension(outputFile, format);
     check_directory(output_dir);
-    char* outputPath = (char*) malloc((strlen(output_dir) + 1) * sizeof(char) + sizeof(outputFile));
-    check_string(outputPath, DIR_O);
+    char* outputPath = create_string(strlen(output_dir )+ strlen(outputFile) + 1, DIR_O);
     strcpy(outputPath, output_dir);
     strcat(outputPath, "/");
     strcat(outputPath, outputFile);

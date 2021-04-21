@@ -6,9 +6,10 @@
 
 #include "key.h"
 
-char** create_matrix(int rows, int columns);
+char* create_string(int length, char* error);
 void free_string(char* string);
 void check_string(char* string, char* errmessage);
+char** create_matrix(int rows, int columns);
 void free_matrix(char** matrix, int rows);
 void check_matrix(char** matrix, char* errmessage);
 void free_key(key* k);

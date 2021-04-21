@@ -14,8 +14,7 @@ char* read_file(char* input_file) {
 }
 
 char* reader(FILE* fin) {
-    char* buffer = (char*) malloc(sizeof(char) * (file_size(fin)+1));
-    check_string(buffer, INP_BUFF_ERROR);
+    char* buffer = create_string(file_size(fin)+1, INP_BUFF_ERROR);
     int i = 0;
     char c;
     while ((c = toupper(fgetc(fin))) != EOF) {
