@@ -141,32 +141,32 @@ playfair/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\playfair.dir\build.make CMakeFiles/playfair.dir/build
 .PHONY : playfair/fast
 
-coding.obj: coding.c.obj
+decoding.obj: decoding.c.obj
 
-.PHONY : coding.obj
+.PHONY : decoding.obj
 
 # target to build an object file
-coding.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\playfair.dir\build.make CMakeFiles/playfair.dir/coding.c.obj
-.PHONY : coding.c.obj
+decoding.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\playfair.dir\build.make CMakeFiles/playfair.dir/decoding.c.obj
+.PHONY : decoding.c.obj
 
-coding.i: coding.c.i
+decoding.i: decoding.c.i
 
-.PHONY : coding.i
+.PHONY : decoding.i
 
 # target to preprocess a source file
-coding.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\playfair.dir\build.make CMakeFiles/playfair.dir/coding.c.i
-.PHONY : coding.c.i
+decoding.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\playfair.dir\build.make CMakeFiles/playfair.dir/decoding.c.i
+.PHONY : decoding.c.i
 
-coding.s: coding.c.s
+decoding.s: decoding.c.s
 
-.PHONY : coding.s
+.PHONY : decoding.s
 
 # target to generate assembly for a file
-coding.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\playfair.dir\build.make CMakeFiles/playfair.dir/coding.c.s
-.PHONY : coding.c.s
+decoding.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\playfair.dir\build.make CMakeFiles/playfair.dir/decoding.c.s
+.PHONY : decoding.c.s
 
 directory.obj: directory.c.obj
 
@@ -393,9 +393,9 @@ help:
 	@echo ... edit_cache
 	@echo ... rebuild_cache
 	@echo ... playfair
-	@echo ... coding.obj
-	@echo ... coding.i
-	@echo ... coding.s
+	@echo ... decoding.obj
+	@echo ... decoding.i
+	@echo ... decoding.s
 	@echo ... directory.obj
 	@echo ... directory.i
 	@echo ... directory.s

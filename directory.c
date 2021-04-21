@@ -21,7 +21,7 @@ char* create_directory(char* output_dir, char* input_file, char* format) {
     strcpy(outputFile, basename(input_file));
     modify_extension(outputFile, format);
     check_directory(output_dir);
-    char* outputPath = create_string(strlen(output_dir )+ strlen(outputFile) + 1, DIR_O);
+    char* outputPath = create_string(strlen(output_dir) + strlen(outputFile) + 1, DIR_O);
     strcpy(outputPath, output_dir);
     strcat(outputPath, "/");
     strcat(outputPath, outputFile);

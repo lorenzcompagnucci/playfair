@@ -127,18 +127,18 @@ CMakeFiles/playfair.dir/directory.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/playfair.dir/directory.c.s"
 	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S C:\Users\loren\CLionProjects\playfair\directory.c -o CMakeFiles\playfair.dir\directory.c.s
 
-CMakeFiles/playfair.dir/coding.c.obj: CMakeFiles/playfair.dir/flags.make
-CMakeFiles/playfair.dir/coding.c.obj: ../coding.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\loren\CLionProjects\playfair\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building C object CMakeFiles/playfair.dir/coding.c.obj"
-	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles\playfair.dir\coding.c.obj -c C:\Users\loren\CLionProjects\playfair\coding.c
+CMakeFiles/playfair.dir/decoding.c.obj: CMakeFiles/playfair.dir/flags.make
+CMakeFiles/playfair.dir/decoding.c.obj: ../decoding.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\loren\CLionProjects\playfair\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building C object CMakeFiles/playfair.dir/decoding.c.obj"
+	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles\playfair.dir\decoding.c.obj -c C:\Users\loren\CLionProjects\playfair\decoding.c
 
-CMakeFiles/playfair.dir/coding.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/playfair.dir/coding.c.i"
-	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E C:\Users\loren\CLionProjects\playfair\coding.c > CMakeFiles\playfair.dir\coding.c.i
+CMakeFiles/playfair.dir/decoding.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/playfair.dir/decoding.c.i"
+	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E C:\Users\loren\CLionProjects\playfair\decoding.c > CMakeFiles\playfair.dir\decoding.c.i
 
-CMakeFiles/playfair.dir/coding.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/playfair.dir/coding.c.s"
-	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S C:\Users\loren\CLionProjects\playfair\coding.c -o CMakeFiles\playfair.dir\coding.c.s
+CMakeFiles/playfair.dir/decoding.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/playfair.dir/decoding.c.s"
+	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S C:\Users\loren\CLionProjects\playfair\decoding.c -o CMakeFiles\playfair.dir\decoding.c.s
 
 CMakeFiles/playfair.dir/keygen.c.obj: CMakeFiles/playfair.dir/flags.make
 CMakeFiles/playfair.dir/keygen.c.obj: ../keygen.c
@@ -198,7 +198,7 @@ playfair_OBJECTS = \
 "CMakeFiles/playfair.dir/key.c.obj" \
 "CMakeFiles/playfair.dir/file.c.obj" \
 "CMakeFiles/playfair.dir/directory.c.obj" \
-"CMakeFiles/playfair.dir/coding.c.obj" \
+"CMakeFiles/playfair.dir/decoding.c.obj" \
 "CMakeFiles/playfair.dir/keygen.c.obj" \
 "CMakeFiles/playfair.dir/mem_utils.c.obj" \
 "CMakeFiles/playfair.dir/elab_utils.c.obj" \
@@ -211,7 +211,7 @@ playfair.exe: CMakeFiles/playfair.dir/main.c.obj
 playfair.exe: CMakeFiles/playfair.dir/key.c.obj
 playfair.exe: CMakeFiles/playfair.dir/file.c.obj
 playfair.exe: CMakeFiles/playfair.dir/directory.c.obj
-playfair.exe: CMakeFiles/playfair.dir/coding.c.obj
+playfair.exe: CMakeFiles/playfair.dir/decoding.c.obj
 playfair.exe: CMakeFiles/playfair.dir/keygen.c.obj
 playfair.exe: CMakeFiles/playfair.dir/mem_utils.c.obj
 playfair.exe: CMakeFiles/playfair.dir/elab_utils.c.obj

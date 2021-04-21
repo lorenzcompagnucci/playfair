@@ -18,20 +18,16 @@ key* get_key(char* key_path) {
 key_data* get_key_data(char* buffer) {
     key_data* kd = (key_data*) malloc(sizeof(key_data));
     char* token = strtok(buffer, "\r\n");
-    kd->alphabet = (char*) malloc(sizeof(char) * (strlen(token)+1));
-    check_string(kd->alphabet, KEY_DATA_ERROR);
+    kd->alphabet = create_string(strlen(token)+1, KEY_DATA_ERROR);
     strcpy(kd->alphabet, token);
     token = strtok(NULL, "\r\n");
-    kd->replacement = (char*) malloc(sizeof(char) * (strlen(token)+1));
-    check_string(kd->replacement, KEY_DATA_ERROR);
+    kd->replacement = create_string(strlen(token)+1, KEY_DATA_ERROR);
     strcpy(kd->replacement, token);
     token = strtok(NULL, "\r\n");
-    kd->special = (char*) malloc(sizeof(char) * (strlen(token)+1));
-    check_string(kd->special, KEY_DATA_ERROR);
+    kd->special = create_string(strlen(token)+1, KEY_DATA_ERROR);
     strcpy(kd->special, token);
     token = strtok(NULL, "\r\n");
-    kd->keyword = (char*) malloc(sizeof(char) * (strlen(token)+1));
-    check_string(kd->keyword, KEY_DATA_ERROR);
+    kd->keyword = create_string(strlen(token)+1, KEY_DATA_ERROR);
     strcpy(kd->keyword, token);
     return kd;
 }

@@ -13,11 +13,15 @@
   <component name="ChangeListManager">
     <list default="true" id="5bcaa253-dc8c-486d-9b11-6666cdece04a" name="Default Changelist" comment="FINALE">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/playfair.dir/DependInfo.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/playfair.dir/DependInfo.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/playfair.dir/build.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/playfair.dir/build.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/playfair.dir/cmake_clean.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/playfair.dir/cmake_clean.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/playfair.dir/objects1.rsp" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/playfair.dir/objects1.rsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Makefile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/Testing/Temporary/LastTest.log" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Testing/Temporary/LastTest.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/playfair.cbp" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/playfair.cbp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/directory.c" beforeDir="false" afterPath="$PROJECT_DIR$/directory.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/elab_utils.c" beforeDir="false" afterPath="$PROJECT_DIR$/elab_utils.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/file.c" beforeDir="false" afterPath="$PROJECT_DIR$/file.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mem_utils.c" beforeDir="false" afterPath="$PROJECT_DIR$/mem_utils.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mem_utils.h" beforeDir="false" afterPath="$PROJECT_DIR$/mem_utils.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/key.c" beforeDir="false" afterPath="$PROJECT_DIR$/key.c" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -55,9 +59,9 @@
     </key>
   </component>
   <component name="RunManager">
-    <configuration default="true" type="CLionExternalRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true">
+    <configuration default="true" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true">
       <method v="2">
-        <option name="CLION.EXTERNAL.BUILD" enabled="true" />
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
     </configuration>
     <configuration name="playfair" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="playfair" TARGET_NAME="playfair" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="playfair" RUN_TARGET_NAME="playfair">
@@ -153,7 +157,8 @@
       <workItem from="1618436483380" duration="368000" />
       <workItem from="1618838871412" duration="515000" />
       <workItem from="1618953902607" duration="188000" />
-      <workItem from="1618961967346" duration="4089000" />
+      <workItem from="1618961967346" duration="4184000" />
+      <workItem from="1619005695249" duration="2855000" />
     </task>
     <task id="LOCAL-00001" summary="1.0">
       <created>1614941484830</created>
@@ -463,7 +468,14 @@
       <option name="project" value="LOCAL" />
       <updated>1618964935547</updated>
     </task>
-    <option name="localTasksCounter" value="45" />
+    <task id="LOCAL-00045" summary="FINALE">
+      <created>1618966151690</created>
+      <option name="number" value="00045" />
+      <option name="presentableId" value="LOCAL-00045" />
+      <option name="project" value="LOCAL" />
+      <updated>1618966151690</updated>
+    </task>
+    <option name="localTasksCounter" value="46" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
