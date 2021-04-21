@@ -1,11 +1,4 @@
-/snap/clion/145/bin/cmake/linux/bin/cmake -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - Unix Makefiles" /home/lorenzo/CLionProjects/playfair
--- The C compiler identification is GNU 10.2.0
--- Check for working C compiler: /usr/bin/cc
--- Check for working C compiler: /usr/bin/cc - works
--- Detecting C compiler ABI info
--- Detecting C compiler ABI info - done
--- Detecting C compile features
--- Detecting C compile features - done
+"C:\Program Files\JetBrains\CLion 2020.2.4\bin\cmake\win\bin\cmake.exe" -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - MinGW Makefiles" C:\Users\loren\CLionProjects\playfair
 -- Configuring done
 -- Generating done
--- Build files have been written to: /home/lorenzo/CLionProjects/playfair/cmake-build-debug
+-- Build files have been written to: C:/Users/loren/CLionProjects/playfair/cmake-build-debug

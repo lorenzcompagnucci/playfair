@@ -8,114 +8,124 @@
 		<Option virtualFolders="CMake Files\;"/>
 		<Build>
 			<Target title="all">
-				<Option working_dir="/home/lorenzo/CLionProjects/playfair/cmake-build-debug"/>
+				<Option working_dir="C:/Users/loren/CLionProjects/playfair/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/gmake -f &quot;/home/lorenzo/CLionProjects/playfair/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
-					<CompileFile command="/usr/bin/gmake -f &quot;/home/lorenzo/CLionProjects/playfair/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/gmake -f &quot;/home/lorenzo/CLionProjects/playfair/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/gmake -f &quot;/home/lorenzo/CLionProjects/playfair/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-				</MakeCommands>
-			</Target>
-			<Target title="rebuild_cache">
-				<Option working_dir="/home/lorenzo/CLionProjects/playfair/cmake-build-debug"/>
-				<Option type="4"/>
-				<MakeCommands>
-					<Build command="/usr/bin/gmake -f &quot;/home/lorenzo/CLionProjects/playfair/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
-					<CompileFile command="/usr/bin/gmake -f &quot;/home/lorenzo/CLionProjects/playfair/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/gmake -f &quot;/home/lorenzo/CLionProjects/playfair/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/gmake -f &quot;/home/lorenzo/CLionProjects/playfair/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-				</MakeCommands>
-			</Target>
-			<Target title="edit_cache">
-				<Option working_dir="/home/lorenzo/CLionProjects/playfair/cmake-build-debug"/>
-				<Option type="4"/>
-				<MakeCommands>
-					<Build command="/usr/bin/gmake -f &quot;/home/lorenzo/CLionProjects/playfair/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
-					<CompileFile command="/usr/bin/gmake -f &quot;/home/lorenzo/CLionProjects/playfair/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/gmake -f &quot;/home/lorenzo/CLionProjects/playfair/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/gmake -f &quot;/home/lorenzo/CLionProjects/playfair/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/loren/CLionProjects/playfair/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/loren/CLionProjects/playfair/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/loren/CLionProjects/playfair/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/loren/CLionProjects/playfair/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="playfair">
-				<Option output="/home/lorenzo/CLionProjects/playfair/cmake-build-debug/playfair" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/home/lorenzo/CLionProjects/playfair/cmake-build-debug"/>
+				<Option output="C:/Users/loren/CLionProjects/playfair/cmake-build-debug/playfair.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="C:/Users/loren/CLionProjects/playfair/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/10/include"/>
-					<Add directory="/usr/local/include"/>
-					<Add directory="/usr/include/x86_64-linux-gnu"/>
-					<Add directory="/usr/include"/>
+					<Add directory="C:/Program Files/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include"/>
+					<Add directory="C:/Program Files/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include-fixed"/>
+					<Add directory="C:/Program Files/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/../../../../x86_64-w64-mingw32/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/gmake -f &quot;/home/lorenzo/CLionProjects/playfair/cmake-build-debug/Makefile&quot;  VERBOSE=1 playfair"/>
-					<CompileFile command="/usr/bin/gmake -f &quot;/home/lorenzo/CLionProjects/playfair/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/gmake -f &quot;/home/lorenzo/CLionProjects/playfair/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/gmake -f &quot;/home/lorenzo/CLionProjects/playfair/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/loren/CLionProjects/playfair/cmake-build-debug/Makefile&quot;  VERBOSE=1 playfair"/>
+					<CompileFile command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/loren/CLionProjects/playfair/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/loren/CLionProjects/playfair/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/loren/CLionProjects/playfair/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="playfair/fast">
-				<Option output="/home/lorenzo/CLionProjects/playfair/cmake-build-debug/playfair" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/home/lorenzo/CLionProjects/playfair/cmake-build-debug"/>
+				<Option output="C:/Users/loren/CLionProjects/playfair/cmake-build-debug/playfair.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="C:/Users/loren/CLionProjects/playfair/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/10/include"/>
-					<Add directory="/usr/local/include"/>
-					<Add directory="/usr/include/x86_64-linux-gnu"/>
-					<Add directory="/usr/include"/>
+					<Add directory="C:/Program Files/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include"/>
+					<Add directory="C:/Program Files/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include-fixed"/>
+					<Add directory="C:/Program Files/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/../../../../x86_64-w64-mingw32/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/gmake -f &quot;/home/lorenzo/CLionProjects/playfair/cmake-build-debug/Makefile&quot;  VERBOSE=1 playfair/fast"/>
-					<CompileFile command="/usr/bin/gmake -f &quot;/home/lorenzo/CLionProjects/playfair/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/gmake -f &quot;/home/lorenzo/CLionProjects/playfair/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/gmake -f &quot;/home/lorenzo/CLionProjects/playfair/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/loren/CLionProjects/playfair/cmake-build-debug/Makefile&quot;  VERBOSE=1 playfair/fast"/>
+					<CompileFile command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/loren/CLionProjects/playfair/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/loren/CLionProjects/playfair/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/loren/CLionProjects/playfair/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="edit_cache">
+				<Option working_dir="C:/Users/loren/CLionProjects/playfair/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/loren/CLionProjects/playfair/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/loren/CLionProjects/playfair/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/loren/CLionProjects/playfair/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/loren/CLionProjects/playfair/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="rebuild_cache">
+				<Option working_dir="C:/Users/loren/CLionProjects/playfair/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/loren/CLionProjects/playfair/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/loren/CLionProjects/playfair/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/loren/CLionProjects/playfair/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/loren/CLionProjects/playfair/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="/home/lorenzo/CLionProjects/playfair/coding.c">
+		<Unit filename="C:/Users/loren/CLionProjects/playfair/coding.c">
 			<Option target="playfair"/>
 		</Unit>
-		<Unit filename="/home/lorenzo/CLionProjects/playfair/coding.h">
+		<Unit filename="C:/Users/loren/CLionProjects/playfair/coding.h">
 			<Option target="playfair"/>
 		</Unit>
-		<Unit filename="/home/lorenzo/CLionProjects/playfair/directory.c">
+		<Unit filename="C:/Users/loren/CLionProjects/playfair/directory.c">
 			<Option target="playfair"/>
 		</Unit>
-		<Unit filename="/home/lorenzo/CLionProjects/playfair/directory.h">
+		<Unit filename="C:/Users/loren/CLionProjects/playfair/directory.h">
 			<Option target="playfair"/>
 		</Unit>
-		<Unit filename="/home/lorenzo/CLionProjects/playfair/file.c">
+		<Unit filename="C:/Users/loren/CLionProjects/playfair/elab_utils.c">
 			<Option target="playfair"/>
 		</Unit>
-		<Unit filename="/home/lorenzo/CLionProjects/playfair/file.h">
+		<Unit filename="C:/Users/loren/CLionProjects/playfair/elab_utils.h">
 			<Option target="playfair"/>
 		</Unit>
-		<Unit filename="/home/lorenzo/CLionProjects/playfair/key.c">
+		<Unit filename="C:/Users/loren/CLionProjects/playfair/encoding.c">
 			<Option target="playfair"/>
 		</Unit>
-		<Unit filename="/home/lorenzo/CLionProjects/playfair/key.h">
+		<Unit filename="C:/Users/loren/CLionProjects/playfair/encoding.h">
 			<Option target="playfair"/>
 		</Unit>
-		<Unit filename="/home/lorenzo/CLionProjects/playfair/keygen.c">
+		<Unit filename="C:/Users/loren/CLionProjects/playfair/file.c">
 			<Option target="playfair"/>
 		</Unit>
-		<Unit filename="/home/lorenzo/CLionProjects/playfair/keygen.h">
+		<Unit filename="C:/Users/loren/CLionProjects/playfair/file.h">
 			<Option target="playfair"/>
 		</Unit>
-		<Unit filename="/home/lorenzo/CLionProjects/playfair/main.c">
+		<Unit filename="C:/Users/loren/CLionProjects/playfair/key.c">
 			<Option target="playfair"/>
 		</Unit>
-		<Unit filename="/home/lorenzo/CLionProjects/playfair/mem_utils.c">
+		<Unit filename="C:/Users/loren/CLionProjects/playfair/key.h">
 			<Option target="playfair"/>
 		</Unit>
-		<Unit filename="/home/lorenzo/CLionProjects/playfair/mem_utils.h">
+		<Unit filename="C:/Users/loren/CLionProjects/playfair/keygen.c">
 			<Option target="playfair"/>
 		</Unit>
-		<Unit filename="/home/lorenzo/CLionProjects/playfair/CMakeLists.txt">
+		<Unit filename="C:/Users/loren/CLionProjects/playfair/keygen.h">
+			<Option target="playfair"/>
+		</Unit>
+		<Unit filename="C:/Users/loren/CLionProjects/playfair/main.c">
+			<Option target="playfair"/>
+		</Unit>
+		<Unit filename="C:/Users/loren/CLionProjects/playfair/mem_utils.c">
+			<Option target="playfair"/>
+		</Unit>
+		<Unit filename="C:/Users/loren/CLionProjects/playfair/mem_utils.h">
+			<Option target="playfair"/>
+		</Unit>
+		<Unit filename="C:/Users/loren/CLionProjects/playfair/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>
 		</Unit>
 	</Project>
