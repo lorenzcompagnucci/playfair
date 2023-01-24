@@ -1,0 +1,10 @@
+# IDE
+/.vscode
+/.idea
+
+
+CMakeFiles/
+Makefile
+playfair
+CMakeCache.txt
+cmake_install.cmake

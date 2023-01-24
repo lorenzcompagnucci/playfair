@@ -1,3 +1,0 @@
-C:/Users/loren/CLionProjects/playfair/cmake-build-debug/CMakeFiles/playfair.dir
-C:/Users/loren/CLionProjects/playfair/cmake-build-debug/CMakeFiles/edit_cache.dir
-C:/Users/loren/CLionProjects/playfair/cmake-build-debug/CMakeFiles/rebuild_cache.dir
