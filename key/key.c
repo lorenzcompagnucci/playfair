@@ -63,7 +63,7 @@ static void setKey(Key_key_t* key) {
     setMissingChar(key);
 }
 
-Key_key_t* get_key(char* key_path) {
+Key_key_t* Key_getKey(char* key_path) {
     Key_key_t* k = (Key_key_t*) malloc(sizeof(Key_key_t));
     k->matrix = Memory_allocateMatrix(5, 5);
     char* buffer = File_readFile(key_path);

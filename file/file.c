@@ -26,16 +26,16 @@ static char* reader(FILE* fin) {
     return buffer;
 }
 
-void File_checkFile(FILE* fp, char* errmessage) {
+void File_checkFile(FILE* fp) {
     if (fp == NULL) {
-        printf("%s\n", errmessage);
+        printf("%s\n", FOUT_ERROR);
         exit(0);
     }
 }
 
 char* File_readFile(char* input_file) {
     FILE* fin = fopen(input_file, "r");
-    File_checkFile(fin, FIN_ERROR);
+    File_checkFile(fin);
     char* buffer = reader(fin);
     fclose(fin);
     return buffer;

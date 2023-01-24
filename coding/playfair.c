@@ -142,7 +142,7 @@ static void elaborate(char* command, char* output_dir, char* input_file, Key_key
     char* message = File_readFile(input_file);
     char* outputPath = Directory_getDirectory(output_dir, input_file, command);
     FILE* fout = fopen(outputPath, "w");
-    File_checkFile(fout, FOUT_ERROR);
+    File_checkFile(fout);
     Memory_freeString(outputPath);
     if (strcmp(command, "encode") == 0) {
         encodeMessage(key, message, fout);

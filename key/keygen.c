@@ -69,7 +69,7 @@ int Keygen_createKey(char* path, char* alphabet, char* replace, char* special, c
     checkKey(keyword);
     char* file = generateKeyPath(path);
     FILE* fp = fopen(file, "w");
-    File_checkFile(fp, FOUT_ERROR);
+    File_checkFile(fp);
     Memory_freeString(file);
     fprintf(fp, "%s\r\n%c\r\n%c\r\n%s\r\n", alphabet, replace_char, special_char, keyword);
     fflush(fp);
